@@ -114,6 +114,46 @@
     </section>
   </main>
 
+  <section id="faq" class="panel">
+    <h2>Questions, answered</h2>
+    <details class="qa-item">
+      <summary>What is a Monero multisig wallet?</summary>
+      <div class="qa-answer"><div>
+        <p>It's a wallet that needs M out of N people to agree before any funds move — for example, 2-of-3 means any two of the three participants must sign. No single person can spend alone, and the wallet survives lost keys as long as enough participants remain.</p>
+      </div></div>
+    </details>
+    <details class="qa-item">
+      <summary>Does this site ever see my private keys?</summary>
+      <div class="qa-answer"><div>
+        <p>Never. This page is stateless: everything secret happens inside monero-wallet-cli on your own computer. The only things you paste here are the public coordination strings you were going to share with your co-signers anyway.</p>
+      </div></div>
+    </details>
+    <details class="qa-item">
+      <summary>What are the ceremony steps actually doing?</summary>
+      <div class="qa-answer"><div>
+        <p>prepare_multisig creates your personal shareable string; make_multisig combines everyone's strings into the shared wallet; the export/import rounds sync wallet data between participants until every wallet reports the setup is complete.</p>
+      </div></div>
+    </details>
+    <details class="qa-item">
+      <summary>Why are there multiple export/import rounds?</summary>
+      <div class="qa-answer"><div>
+        <p>Each round folds another participant's wallet info into everyone else's. Your wallet tells you when it's done — if it still asks for another round, there's info it hasn't absorbed yet.</p>
+      </div></div>
+    </details>
+    <details class="qa-item">
+      <summary>What happens if someone loses their key?</summary>
+      <div class="qa-answer"><div>
+        <p>That's exactly what M-of-N protects against: as long as at least M participants still have working keys, the funds can be spent. Pick M to survive the losses you realistically expect.</p>
+      </div></div>
+    </details>
+    <details class="qa-item">
+      <summary>Do we all have to be online at the same time?</summary>
+      <div class="qa-answer"><div>
+        <p>No — the ceremony is turn-based. Each person runs their command and shares their string whenever suits them (chat, email, QR code), and the group moves to the next step once everyone's pieces are in.</p>
+      </div></div>
+    </details>
+  </section>
+
   <section id="donate" class="panel donate-box">
     <h2>Support this project</h2>
     <div class="donate-inner">
