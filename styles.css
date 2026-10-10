@@ -134,3 +134,22 @@ ol { padding-left: 1.25rem; }
 ol li { margin-bottom: 0.4rem; }
 
 footer { text-align: center; margin-top: 2rem; }
+
+/* ---- donate box ---- */
+.donate-box { border: 2px solid var(--accent); }
+.donate-box h2 { margin-top: 0; }
+.donate-inner { display: flex; gap: 1.25rem; align-items: flex-start; }
+#donate-qr {
+  width: 180px; height: 180px; border-radius: 8px;
+  flex-shrink: 0; object-fit: cover;
+}
+.donate-side { flex: 1; min-width: 0; }
+.donate-id { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.6rem; }
+#donate-pfp { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; }
+.donate-handle { display: inline-flex; align-items: center; gap: 0.4rem; font-weight: 600; }
+.logo { width: 20px; height: 20px; fill: var(--text); }
+.donate-addr { margin: 0.75rem 0; }
+@media (max-width: 560px) {
+  .donate-inner { flex-direction: column; align-items: center; text-align: center; }
+  .donate-id { justify-content: center; }
+}

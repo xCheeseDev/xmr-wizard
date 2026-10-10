@@ -231,6 +231,12 @@ document.getElementById("btn-round-no").addEventListener("click", () => {
 });
 document.getElementById("btn-reset").addEventListener("click", resetAll);
 
+/* ---------- donate ---------- */
+const DONATE_ADDRESS = "85JuRjHskBj6sxKunWcsJPev5Ck3Gq8az6swN9eFF1K87frhfnt7EGRAMHm8jvkMAkjKr1mWbmDEu866Hkfeu56hCQ7DaQJ";
+function initDonate() {
+  document.getElementById("donate-address").textContent = DONATE_ADDRESS;
+}
+
 /* ---------- init ---------- */
 load();
 // If we reload mid-ceremony, peer input boxes need rebuilding for the saved N.
@@ -238,4 +244,5 @@ buildPeerInputs("peer-strings", state.participants - 1, "peer-");
 if (state.myPrepareString)
   document.getElementById("my-string").textContent = state.myPrepareString;
 wireCopyButtons();
+initDonate();
 show(state.step || "setup");
