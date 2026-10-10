@@ -152,3 +152,14 @@ footer { text-align: center; margin-top: 2rem; }
   .donate-inner { flex-direction: column; align-items: center; text-align: center; }
   .donate-id { justify-content: center; }
 }
+
+/* ---- Q&A accordion ---- */
+.qa-item { border: 1px solid #3a2f26; border-radius: 8px; margin-bottom: 0.6rem; background: #100c09; }
+.qa-item summary { cursor: pointer; padding: 0.8rem 1rem; font-weight: 600; list-style: none; display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; }
+.qa-item summary::-webkit-details-marker { display: none; }
+.qa-item summary::after { content: "+"; color: var(--accent); font-size: 1.35rem; line-height: 1; flex-shrink: 0; transition: transform 0.2s ease; }
+.qa-item[open] summary::after { transform: rotate(45deg); }
+.qa-answer { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 0.25s ease; }
+.qa-item[open] .qa-answer { grid-template-rows: 1fr; }
+.qa-answer > div { overflow: hidden; min-height: 0; }
+.qa-answer p { margin: 0; padding: 0 1rem 0.9rem; color: var(--muted); font-size: 0.95rem; }
