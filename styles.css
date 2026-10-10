@@ -145,7 +145,6 @@ footer { text-align: center; margin-top: 2rem; }
 }
 .donate-side { flex: 1; min-width: 0; }
 .donate-id { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.6rem; }
-#donate-pfp { width: 48px; height: 48px; border-radius: 50%; object-fit: cover; }
 .donate-handle { display: inline-flex; align-items: center; gap: 0.4rem; font-weight: 600; }
 .logo { width: 20px; height: 20px; fill: var(--text); }
 .donate-addr { margin: 0.75rem 0; }
