@@ -237,6 +237,40 @@ function initDonate() {
   document.getElementById("donate-address").textContent = DONATE_ADDRESS;
 }
 
+/* Enlarge the donation QR on tap/click for easier scanning. */
+function initQrLightbox() {
+  var qr = document.getElementById("donate-qr");
+  if (!qr) return;
+  var overlay = null;
+  function close() {
+    if (overlay) { overlay.remove(); overlay = null; }
+    document.removeEventListener("keydown", onKey);
+  }
+  function onKey(e) { if (e.key === "Escape") close(); }
+  function open() {
+    if (overlay) return;
+    overlay = document.createElement("div");
+    overlay.className = "qr-lightbox";
+    var img = document.createElement("img");
+    img.alt = "Monero donation QR code, enlarged";
+    img.src = qr.src;
+    var hint = document.createElement("p");
+    hint.textContent = "Tap anywhere to close";
+    overlay.appendChild(img);
+    overlay.appendChild(hint);
+    overlay.addEventListener("click", close);
+    document.body.appendChild(overlay);
+    document.addEventListener("keydown", onKey);
+  }
+  qr.setAttribute("tabindex", "0");
+  qr.setAttribute("role", "button");
+  qr.setAttribute("aria-label", "Enlarge donation QR code");
+  qr.addEventListener("click", open);
+  qr.addEventListener("keydown", function (e) {
+    if (e.key === "Enter" || e.key === " ") { e.preventDefault(); open(); }
+  });
+}
+
 /* ---------- init ---------- */
 load();
 // If we reload mid-ceremony, peer input boxes need rebuilding for the saved N.
@@ -245,4 +279,5 @@ if (state.myPrepareString)
   document.getElementById("my-string").textContent = state.myPrepareString;
 wireCopyButtons();
 initDonate();
+initQrLightbox();
 show(state.step || "setup");
