@@ -186,3 +186,7 @@ button.back:hover { background: #8a3a00; }
 
 /* hidden must win over the flex layout on the progress navs */
 #progress[hidden], #spend-progress[hidden] { display: none; }
+
+/* bright yellow guide link in the header note */
+.safety-note a { color: #ffe600; }
+.safety-note a:hover { color: #fff7ae; }
