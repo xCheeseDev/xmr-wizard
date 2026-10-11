@@ -279,6 +279,84 @@ function wireBackButtons() {
   });
 }
 
+/* ---------- spend flow scaffold ---------- */
+const spend = { threshold: 2, signers: 3, signed: 0 };
+
+function setTab(mode) {
+  document.querySelectorAll(".mode-tab").forEach((t) => {
+    t.classList.toggle("active", t.dataset.mode === mode);
+  });
+}
+
+function spendShow(name) {
+  setTab("spend");
+  for (const s of STEPS) document.getElementById("step-" + s).hidden = true;
+  document.getElementById("progress").hidden = true;
+  document.querySelectorAll(".spend-panel").forEach((p) => {
+    p.hidden = p.id !== "spend-" + name;
+  });
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+function spendExit() {
+  setTab("setup");
+  document.querySelectorAll(".spend-panel").forEach((p) => { p.hidden = true; });
+  document.getElementById("progress").hidden = false;
+  show(state.step || "setup");
+}
+
+function spendRenderCounter() {
+  document.getElementById("spend-count").textContent = spend.signed;
+  document.getElementById("spend-need").textContent = spend.threshold;
+}
+
+function wireSpend() {
+  document.querySelectorAll(".mode-tab").forEach((t) => {
+    t.addEventListener("click", () => {
+      if (t.dataset.mode === "spend") spendShow("intro");
+      else spendExit();
+    });
+  });
+
+  document.getElementById("btn-spend-start").addEventListener("click", () => {
+    const m = parseInt(document.getElementById("spend-threshold").value, 10);
+    const n = parseInt(document.getElementById("spend-signers").value, 10);
+    const err = document.getElementById("spend-setup-error");
+    if (!(m >= 1 && n >= 2 && m <= n)) {
+      err.textContent = "Need 1 \u2264 M \u2264 N, with at least 2 signers.";
+      err.hidden = false;
+      return;
+    }
+    err.hidden = true;
+    spend.threshold = m;
+    spend.signers = n;
+    spend.signed = 1; // proposer signed in step 1
+    spendShow("propose");
+  });
+
+  document.getElementById("btn-propose-next").addEventListener("click", () => {
+    spendRenderCounter();
+    spendShow("sign");
+  });
+
+  document.getElementById("btn-signer-signed").addEventListener("click", () => {
+    spend.signed += 1;
+    if (spend.signed >= spend.threshold) spendShow("broadcast");
+    else spendRenderCounter();
+  });
+
+  document.getElementById("btn-broadcast-done").addEventListener("click", () => spendShow("done"));
+  document.getElementById("btn-spend-again").addEventListener("click", () => spendShow("intro"));
+
+  document.querySelectorAll("button.back[data-spend-back]").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const t = btn.dataset.spendBack;
+      if (t === "wizard") spendExit();
+      else spendShow(t);
+    });
+  });
+}
+
 /* ---------- init ---------- */
 load();
 // If we reload mid-ceremony, peer input boxes need rebuilding for the saved N.
@@ -289,4 +367,5 @@ wireCopyButtons();
 wireBackButtons();
 initDonate();
 initQrLightbox();
+wireSpend();
 show(state.step || "setup");
