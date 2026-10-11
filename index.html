@@ -179,7 +179,7 @@
     </section>
   </main>
 
-  <section id="faq" class="panel">
+  <section id="faq-setup" class="panel">
     <h2>Questions, answered</h2>
     <details class="qa-item">
       <summary>Who is this site for?</summary>
@@ -222,6 +222,46 @@
       <summary>Do we all have to be online at the same time?</summary>
       <div class="qa-answer"><div>
         <p>No — the ceremony is turn-based. Each person runs their command and shares their string whenever suits them (chat, email, QR code), and the group moves to the next step once everyone's pieces are in.</p>
+      </div></div>
+    </details>
+  </section>
+
+  <section id="faq-spend" class="panel" hidden>
+    <h2>Questions, answered</h2>
+    <details class="qa-item">
+      <summary>Who is the spend coordinator for?</summary>
+      <div class="qa-answer"><div>
+        <p>Anyone who needs to move funds out of a multisig wallet. One person proposes the transaction, each required signer adds their signature, and anyone broadcasts it once enough signatures are collected — this page keeps the whole group in step.</p>
+      </div></div>
+    </details>
+    <details class="qa-item">
+      <summary>Do all signers have to be online at the same time?</summary>
+      <div class="qa-answer"><div>
+        <p>No — spending is turn-based, just like setup. Each signer runs their command and passes the transaction file along whenever suits them.</p>
+      </div></div>
+    </details>
+    <details class="qa-item">
+      <summary>What if one signer is unavailable?</summary>
+      <div class="qa-answer"><div>
+        <p>That’s what the threshold is for. In a 2-of-3 wallet, if one signer is away, the other two can still complete the spend — just skip the missing signer and pass the file to the next one.</p>
+      </div></div>
+    </details>
+    <details class="qa-item">
+      <summary>Does this site see my transaction or private keys?</summary>
+      <div class="qa-answer"><div>
+        <p>Never. Everything secret happens inside monero-wallet-cli on each signer’s own computer. This page only coordinates the order of steps and counts signatures.</p>
+      </div></div>
+    </details>
+    <details class="qa-item">
+      <summary>Does the signing order matter?</summary>
+      <div class="qa-answer"><div>
+        <p>The proposer always goes first, since they create the transaction. After that, the remaining signers can sign in any order your group agrees on.</p>
+      </div></div>
+    </details>
+    <details class="qa-item">
+      <summary>What happens after I broadcast?</summary>
+      <div class="qa-answer"><div>
+        <p>The transaction is submitted to the Monero network, and once it confirms, the funds have moved. Hit ‘Plan another spend’ to coordinate the next one.</p>
       </div></div>
     </details>
   </section>
