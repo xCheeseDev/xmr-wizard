@@ -196,3 +196,19 @@ button.back:hover { background: #8a3a00; }
 .safety-note a:hover { color: #fff7ae; }
 /* ---- Site logo ---- */
 .site-logo { width: 120px; height: 120px; border-radius: 50%; display: block; margin: 0 auto 1rem; border: 2px solid var(--accent); }
+/* ---- Address verifier ---- */
+#verify-inputs input {
+  display: block;
+  width: 100%;
+  margin-top: 0.3rem;
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: 1px solid #3a2f26;
+  background: #100c09;
+  color: var(--text);
+  font-family: ui-monospace, monospace;
+  font-size: 0.85rem;
+}
+.verify-result { font-weight: bold; margin-top: 0.75rem; }
+.verify-result.ok { color: #7dd87d; }
+.verify-result.error { color: var(--danger); }
