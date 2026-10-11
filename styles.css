@@ -194,3 +194,5 @@ button.back:hover { background: #8a3a00; }
 /* bright yellow guide link in the header note */
 .safety-note a { color: #ffe600; }
 .safety-note a:hover { color: #fff7ae; }
+/* ---- Site logo ---- */
+.site-logo { width: 120px; height: 120px; border-radius: 50%; display: block; margin: 0 auto 1rem; border: 2px solid var(--accent); }
