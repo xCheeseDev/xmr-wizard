@@ -272,6 +272,13 @@ function initQrLightbox() {
   });
 }
 
+/* Back buttons carry data-back="<step>" and return to the previous stage. */
+function wireBackButtons() {
+  document.querySelectorAll("button.back").forEach((btn) => {
+    btn.addEventListener("click", () => show(btn.dataset.back));
+  });
+}
+
 /* ---------- init ---------- */
 load();
 // If we reload mid-ceremony, peer input boxes need rebuilding for the saved N.
@@ -279,6 +286,7 @@ buildPeerInputs("peer-strings", state.participants - 1, "peer-");
 if (state.myPrepareString)
   document.getElementById("my-string").textContent = state.myPrepareString;
 wireCopyButtons();
+wireBackButtons();
 initDonate();
 initQrLightbox();
 show(state.step || "setup");
