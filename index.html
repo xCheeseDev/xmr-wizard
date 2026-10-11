@@ -19,6 +19,11 @@
     </p>
   </header>
 
+  <nav class="mode-tabs" aria-label="Wizard mode">
+    <button class="mode-tab active" data-mode="setup">Setup wizard</button>
+    <button class="mode-tab" data-mode="spend">Spend coordinator</button>
+  </nav>
+
   <nav id="progress" aria-label="Ceremony progress"></nav>
 
   <main>
@@ -118,6 +123,58 @@
       </ol>
       <p class="muted">This page stored nothing anywhere except your own browser's local storage. Clear it with the button below.</p>
       <button id="btn-reset" class="secondary">Reset wizard</button>
+    </section>
+
+    <!-- Spend flow scaffold -->
+    <section id="spend-intro" class="panel spend-panel" hidden>
+      <h2>Spend from your multisig</h2>
+      <p>Coordinate a spend across your signers. One person proposes the transaction, each signer adds a signature with <code>sign_multisig</code>, and anyone broadcasts it once enough signatures are collected.</p>
+      <label>
+        Signatures required (M):
+        <input id="spend-threshold" type="number" min="1" value="2" />
+      </label>
+      <label>
+        Total signers (N):
+        <input id="spend-signers" type="number" min="2" value="3" />
+      </label>
+      <p id="spend-setup-error" class="error" hidden></p>
+      <button id="btn-spend-start">Start spend flow</button>
+      <button class="back" data-spend-back="wizard">Back to setup</button>
+    </section>
+
+    <section id="spend-propose" class="panel spend-panel" hidden>
+      <h2>1. Propose the transaction</h2>
+      <p>One participant creates the transaction in <code>monero-wallet-cli</code>, then adds the first signature:</p>
+      <div class="command"><code>transfer &lt;address&gt; &lt;amount&gt;</code><button class="copy" data-copy="transfer <address> <amount>">Copy</button></div>
+      <div class="command"><code>sign_multisig multisig_tx</code><button class="copy" data-copy="sign_multisig multisig_tx">Copy</button></div>
+      <p>Share the resulting transaction file with the next signer (chat, USB stick, QR &mdash; whatever your group agreed on).</p>
+      <button id="btn-propose-next">Signed &amp; shared &mdash; continue</button>
+      <button class="back" data-spend-back="intro">Back</button>
+    </section>
+
+    <section id="spend-sign" class="panel spend-panel" hidden>
+      <h2>2. Collect signatures</h2>
+      <p>Signatures collected: <strong><span id="spend-count">1</span> / <span id="spend-need">2</span></strong></p>
+      <p>Current signer: load the transaction file and run:</p>
+      <div class="command"><code>sign_multisig multisig_tx</code><button class="copy" data-copy="sign_multisig multisig_tx">Copy</button></div>
+      <p>Then pass the file to the next signer.</p>
+      <button id="btn-signer-signed">This signer is done &mdash; next</button>
+      <button class="back" data-spend-back="propose">Back</button>
+    </section>
+
+    <section id="spend-broadcast" class="panel spend-panel" hidden>
+      <h2>3. Broadcast</h2>
+      <p>Enough signatures collected. Anyone can broadcast the transaction:</p>
+      <div class="command"><code>submit_multisig multisig_tx</code><button class="copy" data-copy="submit_multisig multisig_tx">Copy</button></div>
+      <button id="btn-broadcast-done">Broadcast done</button>
+      <button class="back" data-spend-back="sign">Back</button>
+    </section>
+
+    <section id="spend-done" class="panel spend-panel" hidden>
+      <h2>Spend complete</h2>
+      <p>The transaction has been broadcast to the Monero network.</p>
+      <button id="btn-spend-again" class="secondary">Plan another spend</button>
+      <button class="back" data-spend-back="wizard">Back to setup</button>
     </section>
   </main>
 
