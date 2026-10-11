@@ -51,6 +51,7 @@
       <textarea id="prepare-output" rows="4" placeholder="MultisigV1..."></textarea>
       <p id="prepare-error" class="error" hidden></p>
       <button id="btn-prepare-next">Validate &amp; continue</button>
+      <button class="back" data-back="setup">Back</button>
     </section>
 
     <!-- Step 2: share your string -->
@@ -66,6 +67,7 @@
         <p class="muted">QR code appears here once a renderer is plugged in.</p>
       </div>
       <button id="btn-share-next">I've shared it — continue</button>
+      <button class="back" data-back="prepare">Back</button>
     </section>
 
     <!-- Step 3: collect others + make_multisig -->
@@ -79,6 +81,7 @@
         <p>Run this in <code>monero-wallet-cli</code>:</p>
         <div class="command"><code id="make-command"></code><button class="copy" id="btn-copy-make">Copy</button></div>
         <button id="btn-make-next">Done — continue</button>
+        <button class="back" data-back="share">Back</button>
       </div>
     </section>
 
@@ -98,6 +101,7 @@
         <div class="command"><code id="round-command"></code><button class="copy" id="btn-copy-round">Copy</button></div>
         <p>Did the wallet say the multisig setup is <strong>complete</strong> (no more rounds needed)?</p>
         <button id="btn-round-yes">Yes — wallet is ready</button>
+        <button class="back" data-back="make">Back</button>
         <button id="btn-round-no" class="secondary">No — another round needed</button>
       </div>
     </section>
