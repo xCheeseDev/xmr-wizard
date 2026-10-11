@@ -120,6 +120,11 @@
     <section id="step-done" class="panel" hidden>
       <h2>Ceremony complete</h2>
       <p>Your <span id="done-summary"></span> multisig wallet is ready.</p>
+      <h3>Final safety check</h3>
+      <p>Every participant runs <code>address</code> in their own wallet CLI and pastes the result below. All addresses must be identical &mdash; if any differ, do not use this wallet.</p>
+      <div id="verify-inputs"></div>
+      <button id="btn-verify">Check addresses</button>
+      <p id="verify-result" class="verify-result" hidden></p>
       <h3>Spending later</h3>
       <ol>
         <li>One participant creates the transaction normally, then exports it with <code>sign_multisig</code>.</li>
