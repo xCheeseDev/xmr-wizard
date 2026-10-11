@@ -309,6 +309,8 @@ function spendShow(name) {
   const sp = document.getElementById("spend-progress");
   sp.hidden = false;
   renderSpendProgress(name);
+  document.getElementById("faq-setup").hidden = true;
+  document.getElementById("faq-spend").hidden = false;
   document.querySelectorAll(".spend-panel").forEach((p) => {
     p.hidden = p.id !== "spend-" + name;
   });
@@ -319,6 +321,8 @@ function spendExit() {
   setTab("setup");
   document.querySelectorAll(".spend-panel").forEach((p) => { p.hidden = true; });
   document.getElementById("spend-progress").hidden = true;
+  document.getElementById("faq-setup").hidden = false;
+  document.getElementById("faq-spend").hidden = true;
   document.getElementById("progress").hidden = false;
   show(state.step || "setup");
 }
