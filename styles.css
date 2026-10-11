@@ -45,7 +45,12 @@ header h1 { margin: 0; color: var(--accent); }
   flex-wrap: wrap;
   gap: 0.5rem;
   justify-content: center;
-  margin: 1rem 0 1.5rem;
+  margin: 0 0 1.25rem;
+  padding: 0.9rem;
+  background: var(--panel);
+  border: 1px solid #3a2f26;
+  border-bottom: 2px solid var(--accent);
+  border-radius: var(--radius);
 }
 .pstep {
   font-size: 0.8rem;
