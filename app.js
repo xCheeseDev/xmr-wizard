@@ -90,6 +90,7 @@ function show(step) {
     document.getElementById("step-" + s).hidden = s !== step;
   }
   renderProgress();
+  if (step === "done") renderVerifyInputs();
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
@@ -378,6 +379,52 @@ function wireSpend() {
     });
   });
 }
+
+/* ---------- step: verify addresses ---------- */
+const MONERO_ADDR_RE = /^[1-9A-HJ-NP-Za-km-z]{95}$/;
+
+function renderVerifyInputs() {
+  const wrap = document.getElementById("verify-inputs");
+  wrap.innerHTML = "";
+  const n = state.participants || 2;
+  for (let i = 1; i <= n; i++) {
+    const label = document.createElement("label");
+    label.textContent = "Participant " + i + " address: ";
+    const input = document.createElement("input");
+    input.type = "text";
+    input.className = "verify-addr";
+    input.placeholder = "4\u2026 (95 characters)";
+    input.autocomplete = "off";
+    input.spellcheck = false;
+    label.appendChild(input);
+    wrap.appendChild(label);
+  }
+  const res = document.getElementById("verify-result");
+  res.hidden = true;
+  res.textContent = "";
+  res.className = "verify-result";
+}
+
+function verifyAddresses() {
+  const res = document.getElementById("verify-result");
+  const addrs = [...document.querySelectorAll(".verify-addr")].map((el) => el.value.trim());
+  res.hidden = false;
+  const bad = addrs.findIndex((a) => !(a.length === 95 && a[0] === "4" && MONERO_ADDR_RE.test(a)));
+  if (bad !== -1) {
+    res.className = "verify-result error";
+    res.textContent = "Participant " + (bad + 1) + " doesn't look like a valid Monero address (95 characters, starting with 4).";
+    return;
+  }
+  if (addrs.some((a) => a !== addrs[0])) {
+    res.className = "verify-result error";
+    res.textContent = "Addresses do NOT match \u2014 at least one participant derived a different wallet. Do not use this wallet. Re-run the ceremony.";
+    return;
+  }
+  res.className = "verify-result ok";
+  res.textContent = "All " + addrs.length + " addresses match. Your multisig wallet is verified.";
+}
+
+document.getElementById("btn-verify").addEventListener("click", verifyAddresses);
 
 /* ---------- init ---------- */
 load();
