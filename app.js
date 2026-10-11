@@ -241,6 +241,7 @@ function initDonate() {
 function initQrLightbox() {
   var qr = document.getElementById("donate-qr");
   if (!qr) return;
+  var trigger = qr.closest(".qr-wrap") || qr;
   var overlay = null;
   function close() {
     if (overlay) { overlay.remove(); overlay = null; }
@@ -262,11 +263,11 @@ function initQrLightbox() {
     document.body.appendChild(overlay);
     document.addEventListener("keydown", onKey);
   }
-  qr.setAttribute("tabindex", "0");
-  qr.setAttribute("role", "button");
-  qr.setAttribute("aria-label", "Enlarge donation QR code");
-  qr.addEventListener("click", open);
-  qr.addEventListener("keydown", function (e) {
+  trigger.setAttribute("tabindex", "0");
+  trigger.setAttribute("role", "button");
+  trigger.setAttribute("aria-label", "Enlarge donation QR code");
+  trigger.addEventListener("click", open);
+  trigger.addEventListener("keydown", function (e) {
     if (e.key === "Enter" || e.key === " ") { e.preventDefault(); open(); }
   });
 }
