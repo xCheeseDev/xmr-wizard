@@ -281,6 +281,20 @@ function wireBackButtons() {
 
 /* ---------- spend flow scaffold ---------- */
 const spend = { threshold: 2, signers: 3, signed: 0 };
+const SPEND_STEPS = ["intro", "propose", "sign", "broadcast", "done"];
+const SPEND_TITLES = { intro: "Setup", propose: "Propose", sign: "Sign", broadcast: "Broadcast", done: "Done" };
+
+function renderSpendProgress(current) {
+  const nav = document.getElementById("spend-progress");
+  nav.innerHTML = "";
+  const idx = SPEND_STEPS.indexOf(current);
+  SPEND_STEPS.forEach((s, i) => {
+    const dot = document.createElement("span");
+    dot.className = "pstep" + (i < idx ? " done" : "") + (i === idx ? " current" : "");
+    dot.textContent = (i + 1) + ". " + SPEND_TITLES[s];
+    nav.appendChild(dot);
+  });
+}
 
 function setTab(mode) {
   document.querySelectorAll(".mode-tab").forEach((t) => {
@@ -292,6 +306,9 @@ function spendShow(name) {
   setTab("spend");
   for (const s of STEPS) document.getElementById("step-" + s).hidden = true;
   document.getElementById("progress").hidden = true;
+  const sp = document.getElementById("spend-progress");
+  sp.hidden = false;
+  renderSpendProgress(name);
   document.querySelectorAll(".spend-panel").forEach((p) => {
     p.hidden = p.id !== "spend-" + name;
   });
@@ -301,6 +318,7 @@ function spendShow(name) {
 function spendExit() {
   setTab("setup");
   document.querySelectorAll(".spend-panel").forEach((p) => { p.hidden = true; });
+  document.getElementById("spend-progress").hidden = true;
   document.getElementById("progress").hidden = false;
   show(state.step || "setup");
 }
