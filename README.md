@@ -2,6 +2,8 @@
 
 A free web wizard that walks you through setting up a Monero multisig wallet, validates each step, coordinates the group, and will never touches your keys.
 
+**Live and functional at [xcheesedev.github.io/xmr-wizard](https://xcheesedev.github.io/xmr-wizard/)** — deployed via GitHub Pages.
+
 ## The problem
 
 Monero has supported multisig wallets for years — shared custody, 2-of-3 escrow, DAO treasuries — but almost nobody uses it, because the setup is a CLI obstacle course: `prepare_multisig`, swapping hex strings between participants in the right order, `make_multisig` with the right threshold, then multiple rounds of `export_multisig_info` / `import_multisig_info`. One string pasted wrong and you're debugging blind. The GUI wallet doesn't support multisig at all.
