@@ -104,6 +104,10 @@ function show(step) {
   }
   renderProgress();
   if (step === "done") renderVerifyInputs();
+  // Re-draw the QR whenever the share step shows (covers page reloads
+  // restoring a mid-ceremony step, where the click handler never fires).
+  if (step === "share" && state.myPrepareString)
+    renderQR(state.myPrepareString, document.getElementById("qr-slot"));
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
