@@ -23,7 +23,7 @@ The **Spend coordinator** tab handles life after setup: propose a transaction (a
 
 ## Safety model
 
-Fully stateless. No server, no accounts, no analytics, no network calls. The page never sees or asks for private keys or seed phrases — it only handles the public coordination strings that participants are supposed to share with each other anyway. Pasted CLI outputs are shape-checked (correct prefix, one unbroken line, hex body, sane minimum length) to catch copy-paste mistakes early. All cryptography happens in your own `monero-wallet-cli`. Progress is kept in your browser's local storage only, and the reset button wipes it.
+Fully stateless. No server, no accounts, no analytics, no network calls. The page never sees or asks for private keys or seed phrases — it only handles the public coordination strings that participants are supposed to share with each other anyway. Pasted CLI outputs are shape-checked (correct prefix, one unbroken line, hex body, sane minimum length) to catch copy-paste mistakes early. All cryptography happens in your own `monero-wallet-cli`. The ceremony isn't saved — every visit starts fresh. Only your spend history is kept in your browser's local storage (clear it from the Spend tab).
 
 ## Run it
 
