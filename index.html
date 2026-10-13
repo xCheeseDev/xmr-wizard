@@ -50,6 +50,8 @@
       </label>
       <p id="setup-error" class="error" hidden></p>
       <button id="btn-start">Start ceremony</button>
+      <button id="btn-ceremony-link" class="secondary">Copy ceremony link</button>
+      <p id="ceremony-link-note" class="muted" hidden></p>
     </section>
 
     <!-- Step 1: prepare_multisig -->
@@ -72,10 +74,7 @@
         <code id="my-string"></code>
         <button class="copy" id="btn-copy-mine">Copy</button>
       </div>
-      <div id="qr-slot" class="qr-slot">
-        <!-- QR rendering adapter plugs in here (see app.js) -->
-        <p class="muted">QR code appears here once a renderer is plugged in.</p>
-      </div>
+      <div id="qr-slot" class="qr-slot"></div>
       <button id="btn-share-next">I've shared it — continue</button>
       <button class="back" data-back="prepare">Back</button>
     </section>
@@ -149,12 +148,27 @@
       </label>
       <p id="spend-setup-error" class="error" hidden></p>
       <button id="btn-spend-start">Start spend flow</button>
+      <h3>Past spends</h3>
+      <div id="spend-history">
+        <p id="spend-history-empty" class="muted">No spends recorded yet on this device.</p>
+        <ul id="spend-history-list" hidden></ul>
+        <button id="btn-clear-history" class="secondary" hidden>Clear history</button>
+      </div>
       <button class="back" data-spend-back="wizard">Back to setup</button>
     </section>
 
     <section id="spend-propose" class="panel spend-panel" hidden>
       <h2>1. Propose the transaction</h2>
       <p>One participant creates the transaction in <code>monero-wallet-cli</code>, then adds the first signature:</p>
+      <label>
+        Amount (XMR):
+        <input id="spend-amount" type="text" inputmode="decimal" placeholder="0.5" autocomplete="off" />
+      </label>
+      <label>
+        Destination address (optional):
+        <input id="spend-address" type="text" class="addr-input" placeholder="4&hellip;" autocomplete="off" spellcheck="false" />
+      </label>
+      <p id="propose-error" class="error" hidden></p>
       <div class="command"><code>transfer &lt;address&gt; &lt;amount&gt;</code><button class="copy" data-copy="transfer <address> <amount>">Copy</button></div>
       <div class="command"><code>sign_multisig multisig_tx</code><button class="copy" data-copy="sign_multisig multisig_tx">Copy</button></div>
       <p>Share the resulting transaction file with the next signer (chat, USB stick, QR &mdash; whatever your group agreed on).</p>
@@ -308,6 +322,7 @@
     <p class="muted">Independent from the Monero Project. Verify every command against the wallet CLI you run. Always double-check commands before executing them.</p>
   </footer>
 
+  <script src="qrcode.min.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
