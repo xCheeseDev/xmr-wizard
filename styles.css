@@ -209,3 +209,29 @@ button.back:hover { background: #8a3a00; }
 .verify-result { font-weight: bold; margin-top: 0.75rem; }
 .verify-result.ok { color: #7dd87d; }
 .verify-result.error { color: var(--danger); }
+\n/* ---- QR codes ---- */
+.qr-slot svg { width: 180px; height: 180px; display: block; margin: 0.5rem 0; }
+
+/* ---- Ceremony link / spend form ---- */
+#spend-amount, #spend-address {
+  display: block;
+  width: 100%;
+  margin-top: 0.3rem;
+  padding: 0.6rem;
+  border-radius: 8px;
+  border: 1px solid #3a2f26;
+  background: #100c09;
+  color: var(--text);
+}
+.addr-input { font-family: ui-monospace, monospace; font-size: 0.85rem; }
+#btn-ceremony-link { margin-left: 0.5rem; }
+
+/* ---- Spend history ---- */
+#spend-history-list { list-style: none; padding: 0; margin: 0.5rem 0; }
+#spend-history-list li {
+  padding: 0.45rem 0;
+  border-bottom: 1px solid #3a2f26;
+  font-size: 0.9rem;
+}
+#spend-history-list li b { color: var(--accent); margin-right: 0.4rem; }
+#spend-history-list li span { color: var(--muted); }
