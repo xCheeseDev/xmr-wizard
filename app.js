@@ -4,7 +4,8 @@
  *  - The page never performs cryptography and never sees private keys.
  *  - It only validates and shuffles the PUBLIC coordination strings that
  *    monero-wallet-cli prints (MultisigV1..., exported multisig info).
- *  - Ceremony progress is kept in memory + localStorage (your browser only).
+ *  - Ceremony progress is kept in memory only — every visit starts fresh.
+ *    Only the spend history is kept in localStorage (your browser only).
  *    Nothing is sent anywhere.
  *
  * The ceremony, mapped to CLI commands:
@@ -33,15 +34,8 @@ const state = {
 };
 
 /* ---------- persistence (local only) ---------- */
-function save() {
-  try { localStorage.setItem("xmr-wizard", JSON.stringify(state)); } catch (_) {}
-}
-function load() {
-  try {
-    const raw = localStorage.getItem("xmr-wizard");
-    if (raw) Object.assign(state, JSON.parse(raw));
-  } catch (_) {}
-}
+/* No ceremony persistence by design: every visit starts at step 1.
+ * (Old sessions may have a stale "xmr-wizard" key; init clears it.) */
 function resetAll() {
   try { localStorage.removeItem("xmr-wizard"); } catch (_) {}
   location.reload();
@@ -98,7 +92,6 @@ function renderQR(text, slotEl) {
 /* ---------- UI helpers ---------- */
 function show(step) {
   state.step = step;
-  save();
   for (const s of STEPS) {
     document.getElementById("step-" + s).hidden = s !== step;
   }
@@ -278,7 +271,6 @@ document.getElementById("btn-round-yes").addEventListener("click", () => {
 });
 document.getElementById("btn-round-no").addEventListener("click", () => {
   state.round += 1;
-  save();
   startRound();
 });
 document.getElementById("btn-reset").addEventListener("click", resetAll);
@@ -543,7 +535,7 @@ function verifyAddresses() {
 document.getElementById("btn-verify").addEventListener("click", verifyAddresses);
 
 /* ---------- init ---------- */
-load();
+try { localStorage.removeItem("xmr-wizard"); } catch (_) {} // fresh start every visit
 applyCeremonyLink();
 // If we reload mid-ceremony, peer input boxes need rebuilding for the saved N.
 buildPeerInputs("peer-strings", state.participants - 1, "peer-");
