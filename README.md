@@ -43,11 +43,17 @@ The **Spend coordinator** tab handles life after setup, signer by signer:
 
 ## Node Hub
 
+<table>
+  <tr>
+    <td><img src="niblet.svg" alt="Niblet, the node manager" width="150"></td>
+    <td>Find the fastest, healthiest Monero remote node for *your* connection. A static, stateless page: every node is latency-tested from the visitor's own browser and ranked by speed, with health data (synced / behind / offline) from an hourly automated check, plus a copy button for pasting the address into a wallet.</td>
+  </tr>
+</table>
+
 <p align="center">
   <img src="node-map.svg" alt="Node Hub map">
 </p>
 
-Find the fastest, healthiest Monero remote node for *your* connection. A static, stateless page: every node is latency-tested from the visitor's own browser and ranked by speed, with health data (synced / behind / offline) from an hourly automated check, plus a copy button for pasting the address into a wallet.
 
 ### Adding a node
 

@@ -177,8 +177,11 @@ button.mini:hover { border-color: var(--accent); }
 .test-row { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
 
 /* ---- standalone nodes page ---- */
+/* Node page gets a much wider layout than the main page (body is 760px)
+   so long node names fit on one line. */
+body { max-width: 1200px; }
 .standalone-header { display: flex; align-items: center; gap: 16px; margin: 24px 0; }
-.standalone-mascot { width: 96px; height: 96px; object-fit: cover; border-radius: 50%; border: 1px solid var(--node-border); }
+.standalone-mascot { width: 220px; height: 220px; object-fit: cover; border-radius: 50%; border: 1px solid var(--node-border); }
 .standalone-header h1 { margin: 0; }
 .standalone-header p { margin: 4px 0 0; }
 .standalone-back { margin: 8px 0 0; }
