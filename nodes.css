@@ -189,5 +189,6 @@ button.mini:hover { border-color: var(--accent); }
 .standalone-header p { margin: 4px 0 0; }
 .standalone-back { margin: 8px 0 0; }
 
-.standalone-logo-link { margin-left: auto; }
+.standalone-logo-link { margin-left: auto; display: flex; flex-direction: column; align-items: center; gap: 4px; text-decoration: none; }
 .standalone-logo { width: 72px; height: 72px; object-fit: cover; border-radius: 50%; border: 1px solid var(--node-border); }
+.standalone-logo-text { color: var(--accent); font-size: 13px; font-weight: 600; }
