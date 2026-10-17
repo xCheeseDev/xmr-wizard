@@ -25,13 +25,14 @@ This page coordinates the ceremony, participant by participant:
 5. **Sync** — loop `export_multisig_info` / `import_multisig_info` rounds until every wallet reports the setup complete.
 6. **Verify** — every participant pastes their final wallet address; the page confirms all addresses are identical before anyone funds the wallet.
 
-The **Node Map** and **Node List** tabs (merged from xmr-niblet) find you a fast public node:
+The **Node Hub** (`nodes.html`, merged from xmr-niblet) finds you a fast public node:
 
-- Every time you open either tab, the page runs a fresh **Test my connection** — each node is pinged 3 times from your browser and ranked by median latency. A spinner next to the button shows while the test is running.
-- The list shows health from an hourly automated check (`status.json`: block height, version, reachability) so a fast-but-dead node never tops the ranking.
-- The map plots nodes colored by health, with a popup + copy button per node. Picking a node in the list offers **Show on map**, linking the two views.
+- The page auto-tests on load: every node is pinged 3 times from your browser and ranked by median latency. A spinner shows while the test is running.
+- The list shows the 10 fastest healthy-synced responders first, with a **Show all N nodes** toggle for the full list. Health comes from an hourly automated check (`status.json`: block height, version, reachability) so a fast-but-dead node never tops the ranking.
+- Filter chips (All / Clearnet / Tor / I2P) and a Hide-offline checkbox narrow the list and map.
+- The map plots nodes colored by health, with a popup + copy button per node. Each list row has a **Show on map** button linking the two views.
 - A custom-node tester lets you check any host:port not on the list.
-- A standalone **Node Hub** page (`nodes.html`) puts the map and the list together on one page, linked from the node section. Niblet, the rice-ball node manager, watches over the node section.
+- It is linked from the homepage Nodes box ("See Node Map"). Niblet, the rice-ball node manager, watches over the node section.
 
 The **Spend coordinator** tab handles life after setup, signer by signer:
 
@@ -73,7 +74,7 @@ Pull requests welcome. Add an entry to `nodes.json`:
 - `tls`: set `true` only if the node serves RPC over HTTPS
 - `operator`: who runs it (optional but encouraged)
 - `region`: rough location, helps visitors pick nearby nodes (optional)
-- `lat` / `lon`: coordinates for the Map tab, geocoded from `region` (optional;
+- `lat` / `lon`: coordinates for the map, geocoded from `region` (optional;
   maintainers add them when a node is listed)
 
 Please only list nodes you run or that are publicly advertised by their
