@@ -20,8 +20,8 @@ jobs:
           git config user.name "xmr-wizard-health"
           git config user.email "xmr-wizard-health@users.noreply.github.com"
           git add status.json
-git diff --cached --quiet || git commit -m "Hourly node health check"
-# Main may have moved since checkout (other pushes land while the
-# check runs). Replay our status.json commit on top before pushing.
-git pull --rebase --strategy-option=theirs
-git push
+          git diff --cached --quiet || git commit -m "Hourly node health check"
+          # Main may have moved since checkout (other pushes land while the
+          # check runs). Replay our status.json commit on top before pushing.
+          git pull --rebase --strategy-option=theirs
+          git push
