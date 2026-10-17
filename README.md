@@ -62,6 +62,18 @@ Find the fastest, healthiest Monero remote node for *your* connection. A static,
   <img src="node-map.svg" alt="Node Hub map">
 </p>
 
+<p align="center">
+  <img src="node-test.svg" alt="Node Hub — Test your connection" width="600">
+</p>
+
+<p align="center">
+  <img src="node-list.svg" alt="Node Hub — Nodes list, fastest healthy first" width="600">
+</p>
+
+<p align="center">
+  <img src="node-custom.svg" alt="Node Hub — Test a custom node and how it works" width="600">
+</p>
+
 
 ### Adding a node
 
