@@ -128,21 +128,14 @@ button.mini:hover { border-color: var(--accent); }
 }
 .check input { accent-color: var(--accent); width: 15px; height: 15px; }
 
-/* ---- node picker dropdown ---- */
+/* ---- node list ---- */
 .select-label { display: block; font-weight: 600; margin-bottom: 8px; }
-#nodeSelect {
-  width: 100%;
-  background: var(--node-bg);
-  color: var(--text);
-  border: 1px solid var(--node-border);
-  border-radius: 10px;
-  padding: 10px 12px;
-  font-size: 1rem;
-  margin-bottom: 14px;
-}
-#nodeDetail:empty { display: none; }
-.node-host.big { font-size: 1.25rem; }
-.detail-badges { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin: 10px 0; }
+.node-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; padding: 12px 0; border-bottom: 1px solid var(--node-border); }
+.node-row-main { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.node-row-badges { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.node-row-actions { display: flex; gap: 8px; flex-shrink: 0; }
+.node-expand { width: 100%; background: transparent; color: var(--muted); border: 1px solid var(--node-border); border-radius: 10px; padding: 10px; font-size: 14px; cursor: pointer; margin-top: 12px; }
+.node-expand:hover { color: var(--text); border-color: var(--accent); }
 
 /* ---- map ---- */
 #map {

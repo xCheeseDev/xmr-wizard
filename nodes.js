@@ -34,7 +34,6 @@ const nodeState = {
   filter: 'all',
   hideOffline: true,
   activeTab: 'list',
-  selectedKey: null, // host:port picked in the dropdown
   map: null,
   markers: null,
 };
@@ -232,17 +231,7 @@ function sortedRows() {
     });
 }
 
-function pingLabel(key) {
-  const r = nodeState.results.get(key);
-  if (!r || r.state === 'idle') return 'not tested yet';
-  if (r.state === 'testing') return `testing… ${r.samples.length}/${PROBES_PER_NODE}`;
-  if (r.ms === null) return 'timeout';
-  return `${r.ms} ms`;
-}
 
-function healthLabel(h) {
-  return { synced: 'Synced', behind: 'Behind', offline: 'Offline', unknown: 'Unknown' }[h.state];
-}
 
 function displayRows() {
   const rows = sortedRows();
@@ -251,60 +240,48 @@ function displayRows() {
 }
 
 function renderNodes() {
-  // Nothing in the picker until a test has finished: no untested nodes,
+  // Nothing in the list until a test has finished: no untested nodes,
   // no stale results while a refresh is running.
+  const list = $('nodeList');
   if (nodeState.testing || !nodeState.testedOnce) {
-    $('nodeSelect').innerHTML = '';
-    renderDetail([]);
+    list.innerHTML = '';
     updateMap();
     return;
   }
   const all = sortedRows();
   const rows = displayRows();
-  const select = $('nodeSelect');
-  // keep the user's pick if it's still in the shown list, else take the top row
-  if (!rows.some(({ n }) => nodeKey(n) === nodeState.selectedKey)) {
-    nodeState.selectedKey = rows.length ? nodeKey(rows[0].n) : null;
-  }
-  let opts = rows.map(({ n, h }) => {
+  const truncated = !nodeState.expanded && rows.length < all.length;
+  list.innerHTML = rows.map(({ n, h }) => {
     const key = nodeKey(n);
-    const label = `${key} — ${pingLabel(key)} · ${healthLabel(h)}`;
-    return `<option value="${esc(key)}"${key === nodeState.selectedKey ? ' selected' : ''}>${esc(label)}</option>`;
-  }).join('');
-  if (!rows.length) {
-    opts = all.length
-      ? '<option disabled>No healthy synced nodes responded.</option>'
-      : '<option disabled>No nodes match this filter.</option>';
-  }
-  if (!nodeState.expanded && rows.length < all.length) {
-    opts += '<option value="__expand__">Show all nodes…</option>';
-  }
-  select.innerHTML = opts;
-  renderDetail(rows);
+    const addr = esc(`${n.host}:${n.port}`);
+    const netLabel = { clearnet: 'Clearnet', onion: 'Tor', i2p: 'I2P' }[n.network] || n.network;
+    const sub = [n.operator, n.region].filter(Boolean).map(esc).join(' · ');
+    return `<div class="node-row">
+      <div class="node-row-main">
+        <span class="node-host">${esc(n.host)}<span class="node-port">:${esc(n.port)}</span></span>
+        ${sub ? `<span class="node-op">${sub}</span>` : ''}
+        <span class="node-row-badges">${healthCell(n)} ${pingCell(key)} <span class="net net-${esc(n.network)}">${esc(netLabel)}</span></span>
+      </div>
+      <div class="node-row-actions">
+        <button class="mini" data-copy="${addr}" title="Copy host:port">Copy address</button>
+        <button class="mini" data-show-map="${key}" title="Show this node on the map">Show on map</button>
+      </div>
+    </div>`;
+  }).join('') + (!rows.length
+    ? `<p class="status">${all.length ? 'No healthy synced nodes responded.' : 'No nodes match this filter.'}</p>`
+    : '') + (truncated
+    ? `<button class="node-expand" id="nodeExpandBtn">▼ Show all ${all.length} nodes</button>`
+    : '') + (nodeState.expanded && all.length > 10
+    ? `<button class="node-expand" id="nodeExpandBtn">▲ Show less</button>`
+    : '');
+  list.querySelectorAll('[data-copy]').forEach((btn) => btn.addEventListener('click', (e) => copyText(e.currentTarget.getAttribute('data-copy'), e.currentTarget)));
+  list.querySelectorAll('[data-show-map]').forEach((btn) => btn.addEventListener('click', () => {
+    nodeFocusOnMap(btn.getAttribute('data-show-map'));
+    document.getElementById('map').scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }));
+  const expBtn = $('nodeExpandBtn');
+  if (expBtn) expBtn.addEventListener('click', () => { nodeState.expanded = !nodeState.expanded; renderNodes(); });
   updateMap();
-}
-
-function renderDetail(rows) {
-  const box = $('nodeDetail');
-  const entry = rows.find(({ n }) => nodeKey(n) === nodeState.selectedKey);
-  if (!entry) { box.innerHTML = ''; return; }
-  const { n } = entry;
-  const key = nodeKey(n);
-  const addr = esc(`${n.host}:${n.port}`);
-  const netLabel = { clearnet: 'Clearnet', onion: 'Tor', i2p: 'I2P' }[n.network] || n.network;
-  const sub = [n.operator, n.region].filter(Boolean).map(esc).join(' · ');
-  box.innerHTML = `<div class="node-host big">${esc(n.host)}<span class="node-port">:${esc(n.port)}</span></div>
-    ${sub ? `<div class="node-op">${sub}</div>` : ''}
-    <div class="detail-badges">${healthCell(n)} ${pingCell(key)} <span class="net net-${esc(n.network)}">${esc(netLabel)}</span></div>
-    <button class="mini" data-copy="${addr}" title="Copy host:port">Copy address</button>
-    <button class="mini" data-show-map="${key}" title="Show this node on the map">Show on map</button>`;
-  box.querySelector('[data-copy]').addEventListener('click', (e) => copyText(e.currentTarget.getAttribute('data-copy'), e.currentTarget));
-  const mapBtn = box.querySelector('[data-show-map]');
-  if (mapBtn) mapBtn.addEventListener('click', () => {
-    nodeState.selectedKey = key;
-    if (typeof hubShow === 'function') hubShow('map');
-    nodeFocusOnMap(key);
-  });
 }
 
 /* ---- Map tab ---- */
@@ -413,11 +390,6 @@ function nodeFocusOnMap(key) {
 
 /* ---------- node hub init (no auto-test here — nodeEnter runs it) ---------- */
 $('testBtn').addEventListener('click', nodeTestAll);
-$('nodeSelect').addEventListener('change', (e) => {
-  if (e.target.value === '__expand__') nodeState.expanded = true;
-  else nodeState.selectedKey = e.target.value;
-  renderNodes();
-});
 $('customBtn').addEventListener('click', testCustom);
 $('customHost').addEventListener('keydown', (e) => { if (e.key === 'Enter') testCustom(); });
 

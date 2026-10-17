@@ -35,13 +35,10 @@
       <p id="healthInfo" class="status muted"></p>
     </section>
 <section id="panelList" class="panel">
-      <h2>Pick a node</h2>
-      <label class="select-label" for="nodeSelect">Pick a node &mdash; fastest healthy first</label>
-      <select id="nodeSelect" aria-label="Pick a node">
-        <option>Loading nodes&hellip;</option>
-      </select>
-      <div id="nodeDetail"></div>
-      <p class="footnote">The dropdown ranks nodes fastest healthy first. Ping is the median of 3 probes from your browser to the node&apos;s RPC port (6s timeout each). Health comes from an hourly automated check of each node&apos;s block height &mdash; it can&apos;t be faked by a fast connection. Onion nodes only work in Tor Browser; in a normal browser they&apos;ll show as timeout.</p>
+      <h2>Nodes</h2>
+      <p class="select-label">Fastest healthy first</p>
+      <div id="nodeList"></div>
+      <p class="footnote">The list ranks nodes fastest healthy first. Ping is the median of 3 probes from your browser to the node&apos;s RPC port (6s timeout each). Health comes from an hourly automated check of each node&apos;s block height &mdash; it can&apos;t be faked by a fast connection. Onion nodes only work in Tor Browser; in a normal browser they&apos;ll show as timeout.</p>
       <h3>Test a custom node</h3>
       <p class="muted">Heard about a node that&apos;s not on the list? Check it directly.</p>
       <div class="custom-row">
