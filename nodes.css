@@ -181,7 +181,7 @@ button.mini:hover { border-color: var(--accent); }
    so long node names fit on one line. */
 body { max-width: 1200px; }
 .standalone-header { display: flex; align-items: center; gap: 16px; margin: 24px 0; }
-.standalone-mascot { width: 220px; height: 220px; object-fit: cover; border-radius: 50%; border: 1px solid var(--node-border); }
+.standalone-mascot { width: 220px; height: auto; border-radius: 12px; border: 1px solid var(--node-border); }
 .standalone-header h1 { margin: 0; }
 .standalone-header p { margin: 4px 0 0; }
 .standalone-back { margin: 8px 0 0; }
