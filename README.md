@@ -58,6 +58,8 @@ Find the fastest, healthiest Monero remote node for *your* connection. A static,
 ### Adding a node
 
 Pull requests welcome. Add an entry to `nodes.json`:
+<h3><a href="https://github.com/xCheeseDev/xmr-wizard/edit/main/nodes.json" target="_blank" rel="noopener noreferrer">Add your node here via Pull Request!</a></h3>
+
 
 ```json
 {
