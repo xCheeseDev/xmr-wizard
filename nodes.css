@@ -1,0 +1,178 @@
+/* ---- Node hub (merged from xmr-niblet) ----
+ * Node-specific styles only. Uses the wizard's theme vars
+ * (--bg, --panel, --text, --muted, --accent) plus node-only
+ * health colors defined here. */
+:root {
+  --node-green: #4ade80;
+  --node-yellow: #facc15;
+  --node-red: #f87171;
+  --node-border: #3a2f26;
+  --node-bg: #100c09;
+}
+
+.controls { display: flex; flex-direction: column; gap: 14px; }
+
+.filters { display: flex; gap: 8px; flex-wrap: wrap; }
+.chip {
+  background: transparent;
+  color: var(--muted);
+  border: 1px solid var(--node-border);
+  border-radius: 999px;
+  padding: 7px 16px;
+  font-size: 13px;
+  cursor: pointer;
+  margin-top: 0;
+}
+.chip.active { color: var(--accent); border-color: var(--accent); background: var(--accent-dim); }
+
+.status { margin: 0; color: var(--muted); font-size: 14px; }
+
+.node-host { font-weight: 600; word-break: break-all; }
+.node-port { color: var(--muted); font-weight: 400; }
+.node-op { color: var(--muted); font-size: 12px; }
+
+.ping { font-weight: 700; font-variant-numeric: tabular-nums; }
+.ping.fast { color: var(--node-green); }
+.ping.mid { color: var(--node-yellow); }
+.ping.slow { color: var(--accent); }
+.timeout { color: var(--node-red); }
+
+.testing { display: inline-flex; align-items: center; gap: 8px; color: var(--muted); }
+.spinner {
+  width: 12px; height: 12px;
+  border: 2px solid var(--node-border);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: node-spin 0.8s linear infinite;
+}
+@keyframes node-spin { to { transform: rotate(360deg); } }
+
+.net {
+  font-size: 12px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--node-border);
+  color: var(--muted);
+  white-space: nowrap;
+}
+.net-onion { color: #c084fc; border-color: #4c2a6e; }
+.net-i2p { color: #7dd3fc; border-color: #1e4a5f; }
+.net-clearnet { color: var(--muted); }
+
+button.mini {
+  background: var(--accent-dim);
+  color: var(--accent);
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: 7px 14px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  margin-top: 0;
+}
+button.mini:hover { border-color: var(--accent); }
+
+.footnote { color: var(--muted); font-size: 12px; margin: 14px 0 0; }
+
+.custom-row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
+.custom-row input {
+  background: var(--node-bg);
+  border: 1px solid var(--node-border);
+  border-radius: 10px;
+  color: var(--text);
+  padding: 12px 14px;
+  font-size: 15px;
+}
+#customHost { flex: 1; min-width: 200px; }
+#customPort { width: 110px; }
+.custom-row input:focus { outline: none; border-color: var(--accent); }
+
+.explainer { margin: 8px 0 0; padding-left: 20px; }
+.explainer li { margin-bottom: 10px; font-size: 14px; color: var(--muted); }
+.explainer strong { color: var(--text); }
+.explainer code {
+  background: var(--node-bg);
+  border: 1px solid var(--node-border);
+  border-radius: 6px;
+  padding: 1px 6px;
+  font-size: 13px;
+  color: var(--accent);
+}
+
+.privacy { border-left: 3px solid var(--accent); padding-left: 1rem; }
+.privacy p { margin: 0; font-size: 14px; color: var(--muted); }
+.privacy a { color: var(--accent); }
+
+.health {
+  font-size: 12px;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--node-border);
+  white-space: nowrap;
+}
+.health-ok { color: var(--node-green); border-color: rgba(74, 222, 128, 0.35); }
+.health-warn { color: var(--node-yellow); border-color: rgba(250, 204, 21, 0.35); }
+.health-bad { color: var(--node-red); border-color: rgba(248, 113, 113, 0.35); }
+.health-muted { color: var(--muted); }
+
+.check {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--muted);
+  cursor: pointer;
+  user-select: none;
+}
+.check input { accent-color: var(--accent); width: 15px; height: 15px; }
+
+/* ---- node picker dropdown ---- */
+.select-label { display: block; font-weight: 600; margin-bottom: 8px; }
+#nodeSelect {
+  width: 100%;
+  background: var(--node-bg);
+  color: var(--text);
+  border: 1px solid var(--node-border);
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 1rem;
+  margin-bottom: 14px;
+}
+#nodeDetail:empty { display: none; }
+.node-host.big { font-size: 1.25rem; }
+.detail-badges { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin: 10px 0; }
+
+/* ---- map ---- */
+#map {
+  height: 70vh;
+  min-height: 520px;
+  border-radius: 10px;
+  background: #1a1a1c;
+  z-index: 0;
+}
+.map-popup { font-size: 14px; line-height: 1.5; }
+.map-popup .node-op { margin-bottom: 6px; }
+.map-popup-row { margin-bottom: 8px; color: var(--muted); }
+.map-popup strong { color: var(--text); }
+.leaflet-popup-content-wrapper {
+  background: var(--panel);
+  color: var(--text);
+  border: 1px solid var(--node-border);
+  border-radius: 12px;
+}
+.leaflet-popup-tip { background: var(--panel); }
+.leaflet-popup-content { margin: 14px 16px; }
+.leaflet-container { font-family: inherit; }
+.leaflet-control-attribution {
+  background: rgba(20, 16, 12, 0.8) !important;
+  color: var(--muted) !important;
+  font-size: 11px;
+}
+.leaflet-control-attribution a { color: var(--accent) !important; }
+.leaflet-control-zoom a {
+  background: var(--panel) !important;
+  color: var(--text) !important;
+  border-color: var(--node-border) !important;
+}
