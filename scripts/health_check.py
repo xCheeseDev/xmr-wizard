@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Hourly health check for xmr-niblet.
+"""Hourly health check for xmr-wizard.
 
 Calls get_info on every clearnet node in nodes.json and writes status.json
 with block height, version, and reachability. Onion/I2P nodes are skipped:
