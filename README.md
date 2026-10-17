@@ -106,14 +106,16 @@ operator. The hourly check automatically flags entries that stop responding.
 
 Fully stateless. No server, no accounts, no analytics. The multisig wizard makes no network calls at all; the node hub necessarily probes nodes from your browser and loads the map (Leaflet + OpenStreetMap tiles). The page never sees or asks for private keys or seed phrases — it only handles the public coordination strings that participants are supposed to share with each other anyway. Pasted CLI outputs are shape-checked (correct prefix, one unbroken line, hex body, sane minimum length) to catch copy-paste mistakes early. All cryptography happens in your own `monero-wallet-cli`. The ceremony isn't saved — every visit starts fresh. Only your spend history is kept in your browser's local storage (clear it from the Spend tab).
 
-## Run it
+## Run it locally
 
-No build step. Open `index.html` in a browser, or serve the folder:
+No build step. Serve the folder:
 
 ```sh
 python3 -m http.server 8000
 # then open http://localhost:8000
 ```
+
+Don't open `index.html` straight from disk — browsers block the Node Hub's data fetches from `file://`.
 
 ## Status
 
