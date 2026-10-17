@@ -211,8 +211,12 @@
     <!-- Node hub (merged from xmr-niblet) -->
     <section id="node-controls" class="panel" hidden>
       <h2>Test your connection</h2>
+      <div class="node-manager">
+        <img src="niblet.svg" alt="Niblet, the node manager" class="node-manager-img">
+        <div><strong>Niblet</strong> — Node Manager</div>
+      </div>
       <p>Every time you open the Node Map or Node List, every node gets pinged fresh from your browser and ranked by speed.</p>
-      <button id="testBtn">Test my connection</button>
+      <div class="test-row"><button id="testBtn">Test my connection</button><span id="testSpinner" class="spinner" hidden></span></div>
       <div class="filters" role="group" aria-label="Network filter">
         <button data-filter="all" class="chip active">All</button>
         <button data-filter="clearnet" class="chip">Clearnet</button>
@@ -222,6 +226,7 @@
       <label class="check"><input type="checkbox" id="hideOffline" checked> Hide nodes that look offline</label>
       <p id="status" class="status">Open the Node Map or Node List tab to test your connection &mdash; fresh ping every time.</p>
       <p id="healthInfo" class="status muted"></p>
+      <p><a href="nodes.html">Open the standalone node page</a></p>
     </section>
 
     <section id="panelList" class="panel" hidden>
