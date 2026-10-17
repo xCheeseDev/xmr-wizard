@@ -44,7 +44,7 @@ The **Spend coordinator** tab handles life after setup, signer by signer:
 ## Node Hub
 
 <p align="center">
-  <a href="https://xcheesedev.github.io/xmr-wizard/nodes.html"><img src="niblet.svg" alt="Niblet, the node manager" width="1400"></a>
+  <a href="https://xcheesedev.github.io/xmr-wizard/nodes.html"><img src="niblet.svg" alt="Niblet, the node manager" width="700"></a>
 </p>
 
 Find the fastest, healthiest Monero remote node for *your* connection. A static, stateless page: every node is latency-tested from the visitor's own browser and ranked by speed, with health data (synced / behind / offline) from an hourly automated check, plus a copy button for pasting the address into a wallet.
