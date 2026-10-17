@@ -64,7 +64,7 @@ Keep it stateless. The only vendored dependency is the QR code renderer (qrcode-
 
 ## Coming soon — Premium
 
-A separate Premium section is on the way.
-Ceremony Rooms — a private room keeps your group's multisig ceremony on track across days: it holds only the public coordination strings, validates each paste, and shows whose turn it is.
-Payment Proof — prove an XMR payment happened. Paste a transaction ID, transaction key, and recipient address, and get a receipt.
+A separate Premium section is on the way.<br>
+Ceremony Rooms — a private room keeps your group's multisig ceremony on track across days: it holds only the public coordination strings, validates each paste, and shows whose turn it is.<br>
+Payment Proof — prove an XMR payment happened. Paste a transaction ID, transaction key, and recipient address, and get a receipt.<br>
 Premium will be paid in XMR, with no accounts. The only reason it costs money is to pay for the backend needed to run these features. It stays off until the site moves off GitHub Pages, since rooms and verification need a small backend. The free wizard stays free and stateless.
