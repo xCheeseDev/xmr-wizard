@@ -188,3 +188,6 @@ button.mini:hover { border-color: var(--accent); }
 .standalone-header h1 { margin: 0; }
 .standalone-header p { margin: 4px 0 0; }
 .standalone-back { margin: 8px 0 0; }
+
+.standalone-logo-link { margin-left: auto; }
+.standalone-logo { width: 72px; height: 72px; object-fit: cover; border-radius: 50%; border: 1px solid var(--node-border); }
