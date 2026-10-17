@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Premium — XMR Wizard</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2064%2064'%3E%3Ccircle%20cx%3D'32'%20cy%3D'32'%20r%3D'30'%20fill%3D'%23ff6600'%2F%3E%3Ctext%20x%3D'32'%20y%3D'44'%20font-size%3D'36'%20text-anchor%3D'middle'%20fill%3D'%2314100c'%20font-family%3D'sans-serif'%20font-weight%3D'bold'%3EM%3C%2Ftext%3E%3C%2Fsvg%3E">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="premium.css" />
+</head>
+<body>
+  <header class="premium-header">
+    <h1>Premium</h1>
+    <p class="muted">Paid features for the XMR Wizard. Separate from the free site.</p>
+  </header>
+  <main>
+    <section id="premiumComingSoon" class="panel">
+      <h2>Coming soon</h2>
+      <p>Premium is not live yet. Ceremony Rooms and Payment Proof will live here once the site moves off GitHub Pages.</p>
+    </section>
+    <div id="premiumApp" hidden>
+      <div class="premium-tabs" role="tablist">
+        <button class="premium-tab active" data-premium-tab="rooms">Ceremony Rooms</button>
+        <button class="premium-tab" data-premium-tab="proof">Payment Proof</button>
+      </div>
+      <section id="roomsPanel" class="panel">
+        <h2>Ceremony Rooms</h2>
+        <p class="muted">A private room keeps your group&apos;s multisig ceremony on track across days: it holds only the public coordination strings, validates each paste, and shows whose turn it is. No keys ever touch it.</p>
+        <h3>Create a room</h3>
+        <div class="field-row">
+          <label>M (signatures needed) <input id="roomM" type="number" min="1" value="2"></label>
+          <label>N (participants) <input id="roomN" type="number" min="1" value="3"></label>
+          <button id="createRoomBtn">Create room</button>
+        </div>
+        <p id="roomStatus" class="status"></p>
+        <div id="roomPay" hidden>
+          <p>Pay this address to open the room:</p>
+          <div class="command"><code id="roomPayAddr"></code><button class="copy" id="roomPayCopy">Copy</button></div>
+          <p>Amount: <strong id="roomPayAmount"></strong></p>
+          <p>Room code: <strong id="roomCodeNew"></strong></p>
+        </div>
+        <h3>Join a room</h3>
+        <div class="field-row">
+          <label>Room code <input id="roomCode" type="text" autocomplete="off" spellcheck="false"></label>
+          <button id="joinRoomBtn">Join room</button>
+        </div>
+        <div id="roomView" hidden>
+          <p>Room <strong><span id="roomCodeOut"></span></strong></p>
+          <div id="roomParticipants"></div>
+          <p id="roomTurn" class="status"></p>
+          <label>Paste your coordination string <textarea id="roomPaste" autocomplete="off" spellcheck="false"></textarea></label>
+          <button id="roomValidateBtn">Validate + submit</button>
+          <p id="roomPasteStatus" class="status"></p>
+        </div>
+      </section>
+      <section id="proofPanel" class="panel" hidden>
+        <h2>Payment Proof</h2>
+        <p class="muted">Prove an XMR payment happened. Paste the transaction ID, the transaction key, and the recipient address. The backend checks it against a node and returns a receipt.</p>
+        <label>Transaction ID <input id="proofTxid" type="text" autocomplete="off" spellcheck="false"></label>
+        <label>Transaction key <input id="proofTxKey" type="text" autocomplete="off" spellcheck="false"></label>
+        <label>Recipient address <input id="proofAddress" type="text" autocomplete="off" spellcheck="false"></label>
+        <button id="verifyProofBtn">Verify payment</button>
+        <div id="proofResult"></div>
+        <p id="proofStatus" class="status"></p>
+      </section>
+    </div>
+  </main>
+  <p class="premium-back"><a href="index.html">Back to XMR Wizard</a></p>
+  <script src="premium.js"></script>
+</body>
+</html>

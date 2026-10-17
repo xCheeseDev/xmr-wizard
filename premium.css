@@ -1,0 +1,39 @@
+/* ---- Premium section (dormant scaffold) ----
+ * Separate from the free site. Uses the wizard's theme vars
+ * (--bg, --panel, --text, --muted, --accent). */
+.premium-header { text-align: center; padding: 2rem 0 1rem; }
+.premium-header h1 { margin: 0; }
+
+.premium-tabs { display: flex; gap: 8px; margin-bottom: 14px; }
+.premium-tab {
+  background: transparent;
+  color: var(--muted);
+  border: 1px solid var(--node-border, #3a2f26);
+  border-radius: 999px;
+  padding: 8px 18px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.premium-tab.active { color: var(--accent); border-color: var(--accent); background: var(--accent-dim); }
+
+.field-row { display: flex; gap: 12px; flex-wrap: wrap; align-items: flex-end; margin: 12px 0; }
+#roomsPanel label, #proofPanel label {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 14px;
+  color: var(--muted);
+  margin: 10px 0;
+}
+#roomsPanel input, #proofPanel input, #roomsPanel textarea {
+  background: var(--panel);
+  border: 1px solid var(--node-border, #3a2f26);
+  border-radius: 10px;
+  color: var(--text);
+  padding: 10px 12px;
+  font-size: 15px;
+}
+#roomsPanel textarea { min-height: 90px; width: 100%; box-sizing: border-box; }
+#roomsPanel input:focus, #proofPanel input:focus, #roomsPanel textarea:focus { outline: none; border-color: var(--accent); }
+
+.premium-back { margin: 8px 0 0; }
