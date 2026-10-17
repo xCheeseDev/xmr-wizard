@@ -4,9 +4,9 @@
   </a>
 </p>
 
-# XMR Multisig Wizard
+# XMR Wizard
 
-A free web wizard that walks you through setting up a Monero multisig wallet, validates each step, coordinates the group, and will never touches your keys.
+A free, stateless hub for Monero: set up a multisig wallet step by step, coordinate spending as a group, and find a fast public node — without ever touching your keys.
 
 **Live and functional at [xcheesedev.github.io/xmr-wizard](https://xcheesedev.github.io/xmr-wizard/)** — deployed via GitHub Pages.
 
@@ -25,6 +25,13 @@ This page coordinates the ceremony, participant by participant:
 5. **Sync** — loop `export_multisig_info` / `import_multisig_info` rounds until every wallet reports the setup complete.
 6. **Verify** — every participant pastes their final wallet address; the page confirms all addresses are identical before anyone funds the wallet.
 
+The **Node Map** and **Node List** tabs (merged from xmr-niblet) find you a fast public node:
+
+- Every time you open either tab, the page runs a fresh **Test my connection** — each node is pinged 3 times from your browser and ranked by median latency.
+- The list shows health from an hourly automated check (`status.json`: block height, version, reachability) so a fast-but-dead node never tops the ranking.
+- The map plots nodes colored by health, with a popup + copy button per node. Picking a node in the list offers **Show on map**, linking the two views.
+- A custom-node tester lets you check any host:port not on the list.
+
 The **Spend coordinator** tab handles life after setup, signer by signer:
 
 1. **Setup** — agree on M-of-N for this spend.
@@ -35,7 +42,7 @@ The **Spend coordinator** tab handles life after setup, signer by signer:
 
 ## Safety model
 
-Fully stateless. No server, no accounts, no analytics, no network calls. The page never sees or asks for private keys or seed phrases — it only handles the public coordination strings that participants are supposed to share with each other anyway. Pasted CLI outputs are shape-checked (correct prefix, one unbroken line, hex body, sane minimum length) to catch copy-paste mistakes early. All cryptography happens in your own `monero-wallet-cli`. The ceremony isn't saved — every visit starts fresh. Only your spend history is kept in your browser's local storage (clear it from the Spend tab).
+Fully stateless. No server, no accounts, no analytics. The multisig wizard makes no network calls at all; the node hub necessarily probes nodes from your browser and loads the map (Leaflet + OpenStreetMap tiles). The page never sees or asks for private keys or seed phrases — it only handles the public coordination strings that participants are supposed to share with each other anyway. Pasted CLI outputs are shape-checked (correct prefix, one unbroken line, hex body, sane minimum length) to catch copy-paste mistakes early. All cryptography happens in your own `monero-wallet-cli`. The ceremony isn't saved — every visit starts fresh. Only your spend history is kept in your browser's local storage (clear it from the Spend tab).
 
 ## Run it
 
@@ -52,4 +59,4 @@ Early development. The CLI command mapping in `app.js` follows the documented `m
 
 ## Contributing
 
-Keep it stateless. The only vendored dependency is the QR code renderer (qrcode-generator, MIT) — everything else is hand-written, no CDNs, no network calls. Any feature that would require a server, an account, or handling private key material is out of scope by design.
+Keep it stateless. The only vendored dependency is the QR code renderer (qrcode-generator, MIT). The map loads Leaflet from a CDN (the one exception) plus OpenStreetMap tiles. Any feature that would require a server, an account, or handling private key material is out of scope by design. Any feature that would require a server, an account, or handling private key material is out of scope by design.
