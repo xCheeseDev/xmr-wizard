@@ -182,6 +182,11 @@ button.mini:hover { border-color: var(--accent); }
 .standalone-header h1 { margin: 0; }
 .standalone-header p { margin: 4px 0 0; }
 .standalone-back { margin: 8px 0 0; }
+/* Back link stays orange in every link state: plain class rules lose to the
+   browser's built-in :link/:visited colors and to styles.css a:hover. */
+.standalone-back a, .standalone-back a:link, .standalone-back a:visited, .standalone-back a:hover, .standalone-back a:active { color: var(--accent); text-decoration: none; }
+#panelAddNode pre { background: var(--node-bg); border: 1px solid var(--node-border); border-radius: 10px; padding: 12px 14px; overflow-x: auto; font-size: 14px; }
+#panelAddNode pre code { font-family: ui-monospace, monospace; }
 
 .standalone-logo-link { margin-left: auto; display: flex; flex-direction: column; align-items: center; gap: 4px; text-decoration: none; }
 .standalone-logo { width: 96px; height: 96px; object-fit: cover; border-radius: 50%; border: 1px solid var(--node-border); }

@@ -64,6 +64,26 @@
       <div id="map" aria-label="Map of node locations"></div>
       <p id="mapNote" class="footnote">Dots are colored by health: green synced, yellow behind, red offline, grey unknown. Click a dot for details and a copy button.</p>
     </section>
+    <section id="panelAddNode" class="panel">
+      <h2>Adding a node</h2>
+      <p>Pull requests welcome. Add an entry to <code>nodes.json</code>:</p>
+      <pre><code>{
+  "host": "node.example.com",
+  "port": 18089,
+  "network": "clearnet",
+  "operator": "Your name / org",
+  "region": "City, CC"
+}</code></pre>
+      <ul class="explainer">
+        <li><code>network</code>: <code>"clearnet"</code>, <code>"onion"</code>, or <code>"i2p"</code></li>
+        <li><code>port</code>: <code>18089</code> is the standard restricted RPC port for public nodes</li>
+        <li><code>tls</code>: set <code>true</code> only if the node serves RPC over HTTPS</li>
+        <li><code>operator</code>: who runs it (optional but encouraged)</li>
+        <li><code>region</code>: rough location, helps visitors pick nearby nodes (optional)</li>
+        <li><code>lat</code> / <code>lon</code>: coordinates for the map, geocoded from <code>region</code> (optional; maintainers add them when a node is listed)</li>
+      </ul>
+      <p>Please only list nodes you run or that are publicly advertised by their operator. The hourly check automatically flags entries that stop responding.</p>
+    </section>
   </main>
   <p class="standalone-back"><a href="index.html">Back to XMR Wizard</a></p>
   <script src="nodes.js"></script>
