@@ -1,0 +1,1141 @@
+[
+  {
+    "host": "node.moneroworld.com",
+    "network": "clearnet",
+    "operator": "MoneroWorld",
+    "port": 18089
+  },
+  {
+    "host": "opennode.xmr-tw.org",
+    "network": "clearnet",
+    "operator": "MoneroWorld volunteers",
+    "port": 18089
+  },
+  {
+    "host": "uwillrunanodesoon.moneroworld.com",
+    "network": "clearnet",
+    "operator": "MoneroWorld community",
+    "port": 18089
+  },
+  {
+    "host": "node.xmrbackb.one",
+    "network": "clearnet",
+    "operator": "Snipa",
+    "port": 18081
+  },
+  {
+    "host": "node.xmr.to",
+    "network": "clearnet",
+    "operator": "xmr.to team",
+    "port": 18081
+  },
+  {
+    "host": "nodes.hashvault.pro",
+    "network": "clearnet",
+    "operator": "HashVault pool",
+    "port": 18081
+  },
+  {
+    "host": "node.supportxmr.com",
+    "network": "clearnet",
+    "operator": "SupportXMR pool",
+    "port": 18081
+  },
+  {
+    "host": "node.sethforprivacy.com",
+    "network": "clearnet",
+    "operator": "Seth for Privacy",
+    "port": 18089
+  },
+  {
+    "host": "xmr-node.cakewallet.com",
+    "network": "clearnet",
+    "operator": "Cake Wallet",
+    "port": 18081,
+    "region": "Fremont, US",
+    "lat": 37.5483,
+    "lon": -121.9886
+  },
+  {
+    "host": "nodex.monerujo.io",
+    "network": "clearnet",
+    "operator": "Monerujo",
+    "port": 18081,
+    "region": "Nuremberg, DE",
+    "lat": 49.4539,
+    "lon": 11.0773
+  },
+  {
+    "host": "xmr.robmanfred.fail",
+    "network": "clearnet",
+    "operator": "robmanfred",
+    "port": 18081,
+    "region": "Montreal, CA",
+    "lat": 45.5032,
+    "lon": -73.5698
+  },
+  {
+    "host": "xmr.unfit.ninja",
+    "network": "clearnet",
+    "operator": "unfit.ninja",
+    "port": 18089,
+    "region": "Winnipeg, CA",
+    "lat": 49.8955,
+    "lon": -97.1385
+  },
+  {
+    "host": "guestvm.com",
+    "network": "clearnet",
+    "operator": "guestvm",
+    "port": 18089,
+    "region": "Chicago, US",
+    "lat": 41.8756,
+    "lon": -87.6244
+  },
+  {
+    "host": "xmr.bowlman.net",
+    "network": "clearnet",
+    "operator": "bowlman",
+    "port": 18081,
+    "region": "San Antonio, US",
+    "lat": 29.4246,
+    "lon": -98.4951
+  },
+  {
+    "host": "monero.dyni.net",
+    "network": "clearnet",
+    "operator": "dyni",
+    "port": 18081,
+    "region": "Salem, US",
+    "lat": 44.9392,
+    "lon": -123.0331
+  },
+  {
+    "host": "xmr.4d2.org",
+    "network": "clearnet",
+    "operator": "4d2",
+    "port": 18081,
+    "region": "Bend, US",
+    "lat": 44.0582,
+    "lon": -121.3153
+  },
+  {
+    "host": "caninebear.com",
+    "network": "clearnet",
+    "operator": "caninebear",
+    "port": 18081,
+    "region": "Alliance, US",
+    "lat": 42.0972,
+    "lon": -102.8707
+  },
+  {
+    "host": "xmrbandwagon.hopto.org",
+    "network": "clearnet",
+    "operator": "bandwagon",
+    "port": 18081,
+    "region": "Greeley, US",
+    "lat": 40.4233,
+    "lon": -104.7091
+  },
+  {
+    "host": "xmr.support",
+    "network": "clearnet",
+    "operator": "xmr.support",
+    "port": 18081,
+    "region": "Seattle, US",
+    "lat": 47.6038,
+    "lon": -122.3301
+  },
+  {
+    "host": "meatescargatoire.com",
+    "network": "clearnet",
+    "operator": "meatescargatoire",
+    "port": 18089,
+    "region": "Waco, US",
+    "lat": 31.5545,
+    "lon": -97.1326
+  },
+  {
+    "host": "xmr.pants-on.net",
+    "network": "clearnet",
+    "operator": "pants-on",
+    "port": 18089,
+    "region": "US",
+    "lat": 39.7837,
+    "lon": -100.4459
+  },
+  {
+    "host": "xmr.jel.gay",
+    "network": "clearnet",
+    "operator": "jel",
+    "port": 18081,
+    "region": "Gdansk, PL",
+    "lat": 54.4288,
+    "lon": 18.7983
+  },
+  {
+    "host": "monero.kitakawa.cat",
+    "network": "clearnet",
+    "operator": "kitakawa",
+    "port": 18081,
+    "region": "Debica, PL",
+    "lat": 50.0461,
+    "lon": 21.4128
+  },
+  {
+    "host": "alucardxmr.ydns.eu",
+    "network": "clearnet",
+    "operator": "alucardxmr",
+    "port": 18081,
+    "region": "Augsburg, DE",
+    "lat": 48.369,
+    "lon": 10.898
+  },
+  {
+    "host": "hantaan.fullm00n.de",
+    "network": "clearnet",
+    "operator": "fullm00n",
+    "port": 18089,
+    "region": "D\u00fcsseldorf, DE",
+    "lat": 51.2254,
+    "lon": 6.7763
+  },
+  {
+    "host": "monero.homelinux.org",
+    "network": "clearnet",
+    "operator": "homelinux",
+    "port": 18081,
+    "region": "DE",
+    "lat": 51.1638,
+    "lon": 10.4478
+  },
+  {
+    "host": "edge7.servebeer.com",
+    "network": "clearnet",
+    "operator": "servebeer",
+    "port": 18089,
+    "region": "Forte dei Marmi, IT",
+    "lat": 43.9596,
+    "lon": 10.1699
+  },
+  {
+    "host": "captrondo.onthewifi.com",
+    "network": "clearnet",
+    "operator": "captrondo",
+    "port": 18089,
+    "region": "Lisbon, PT",
+    "lat": 38.7078,
+    "lon": -9.1366
+  },
+  {
+    "host": "xmr.ducks.party",
+    "network": "clearnet",
+    "operator": "ducks.party",
+    "port": 18081,
+    "region": "AT",
+    "lat": 47.594,
+    "lon": 14.1246
+  },
+  {
+    "host": "legalise.it",
+    "network": "clearnet",
+    "operator": "legalise.it",
+    "port": 18089,
+    "region": "AT",
+    "lat": 47.594,
+    "lon": 14.1246
+  },
+  {
+    "host": "xmr.privacy.cash",
+    "network": "clearnet",
+    "operator": "privacy.cash",
+    "port": 18081,
+    "region": "HK",
+    "lat": 22.2818,
+    "lon": 114.1583
+  },
+  {
+    "host": "africa.monodes.fun",
+    "network": "clearnet",
+    "operator": "monodes",
+    "port": 18089,
+    "region": "ZA",
+    "lat": -28.8166,
+    "lon": 24.9916
+  },
+  {
+    "host": "xmr.nadeko.net",
+    "network": "clearnet",
+    "operator": "nadeko",
+    "port": 18081,
+    "region": "Santiago, CL",
+    "lat": -33.4377,
+    "lon": -70.6511
+  },
+  {
+    "host": "34.95.247.125",
+    "network": "clearnet",
+    "operator": "community-listed",
+    "port": 18081,
+    "region": "Del Viso, AR",
+    "lat": -34.4535,
+    "lon": -58.7966
+  },
+  {
+    "host": "corny.cc",
+    "network": "clearnet",
+    "operator": "corny",
+    "port": 443,
+    "region": "Volgograd, RU",
+    "tls": true,
+    "lat": 48.7082,
+    "lon": 44.5153
+  },
+  {
+    "host": "sfprpc2fws6ltnq4hyr7lvpul3nank5layd7q7tyc5h4gy4h77gtabad.onion",
+    "network": "onion",
+    "operator": "Seth for Privacy",
+    "port": 18089
+  },
+  {
+    "host": "monerowinfamlvkp.onion",
+    "network": "onion",
+    "operator": "community-listed (unverified)",
+    "port": 18089
+  },
+  {
+    "host": "pzlnznwgrjlgjsb6.onion",
+    "network": "onion",
+    "operator": "community-listed (unverified)",
+    "port": 18089
+  },
+  {
+    "host": "qjz3tnotsv7xlxj4.onion",
+    "network": "onion",
+    "operator": "community-listed (unverified)",
+    "port": 18089
+  },
+  {
+    "host": "xmrag4hf5xlabmob.onion",
+    "network": "onion",
+    "operator": "community-listed (unverified)",
+    "port": 18081
+  },
+  {
+    "host": "xmr4xfd2o3tzazdb.onion",
+    "network": "onion",
+    "operator": "community-listed (unverified)",
+    "port": 18081
+  },
+  {
+    "host": "mmp26upm3gig2ltk.onion",
+    "network": "onion",
+    "operator": "community-listed (unverified)",
+    "port": 18089
+  },
+  {
+    "host": "xmkwypann4ly64gh.onion",
+    "network": "onion",
+    "operator": "community-listed (unverified)",
+    "port": 18081
+  },
+  {
+    "host": "3hvpnd4xejtzcuowvru2wfjum5wjf7synigm44rrizr3k4v5vzam2bad.onion",
+    "network": "onion",
+    "operator": "community-listed (unverified)",
+    "port": 18081
+  },
+  {
+    "host": "0x255.xyz",
+    "port": 18081,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "region": "Durham, GB",
+    "lat": 54.7770139,
+    "lon": -1.5756205
+  },
+  {
+    "host": "38533.airdns.org",
+    "port": 38533,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "region": "Amsterdam, NL",
+    "lat": 52.3730796,
+    "lon": 4.8924534
+  },
+  {
+    "host": "anstee.dev",
+    "port": 18081,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "tls": true,
+    "region": "London, GB",
+    "lat": 51.5074456,
+    "lon": -0.1277653
+  },
+  {
+    "host": "atm.rabbithole2.net",
+    "port": 18089,
+    "network": "clearnet",
+    "operator": "community-listed"
+  },
+  {
+    "host": "chad.fiatfaucet.com",
+    "port": 443,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "tls": true,
+    "region": "US",
+    "lat": 39.7837304,
+    "lon": -100.445882
+  },
+  {
+    "host": "connect.xmr-node.org",
+    "port": 443,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "tls": true,
+    "region": "AT",
+    "lat": 47.59397,
+    "lon": 14.12456
+  },
+  {
+    "host": "dewitte.fiatfaucet.com",
+    "port": 443,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "tls": true,
+    "region": "Delft, NL",
+    "lat": 52.0114017,
+    "lon": 4.35839
+  },
+  {
+    "host": "kowalski.fiatfaucet.com",
+    "port": 443,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "tls": true,
+    "region": "Delft, NL",
+    "lat": 52.0114017,
+    "lon": 4.35839
+  },
+  {
+    "host": "kuk.fan",
+    "port": 18089,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "region": "IR",
+    "lat": 32.6475314,
+    "lon": 54.5643516
+  },
+  {
+    "host": "ldn1.derp.anstee.dev",
+    "port": 18081,
+    "network": "clearnet",
+    "operator": "community-listed"
+  },
+  {
+    "host": "mainnet.xmr.kernal.eu",
+    "port": 18089,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "region": "Helsinki, FI",
+    "lat": 60.1666204,
+    "lon": 24.9435408
+  },
+  {
+    "host": "monero-rpc.cheems.de.box.skhron.com.ua",
+    "port": 18089,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "tls": true
+  },
+  {
+    "host": "monero.anycolo.net",
+    "port": 18081,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "region": "RO",
+    "lat": 45.9852129,
+    "lon": 24.6859225
+  },
+  {
+    "host": "monero.bowlman.net",
+    "port": 18081,
+    "network": "clearnet",
+    "operator": "community-listed"
+  },
+  {
+    "host": "monero.definitelynotafed.com",
+    "port": 443,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "tls": true,
+    "region": "US",
+    "lat": 39.7837304,
+    "lon": -100.445882
+  },
+  {
+    "host": "monero.econanon.com",
+    "port": 443,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "tls": true,
+    "region": "US",
+    "lat": 39.7837304,
+    "lon": -100.445882
+  },
+  {
+    "host": "monero.forked.net",
+    "port": 18089,
+    "network": "clearnet",
+    "operator": "community-listed"
+  },
+  {
+    "host": "monero.heki.me",
+    "port": 18089,
+    "network": "clearnet",
+    "operator": "community-listed"
+  },
+  {
+    "host": "monero.hexalink.xyz",
+    "port": 18081,
+    "network": "clearnet",
+    "operator": "community-listed"
+  },
+  {
+    "host": "monero.kaythomas.dev",
+    "port": 18089,
+    "network": "clearnet",
+    "operator": "community-listed"
+  },
+  {
+    "host": "monero.konku.rs",
+    "port": 18089,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "region": "DE",
+    "lat": 51.1638175,
+    "lon": 10.4478313
+  },
+  {
+    "host": "monero.mullvad.net",
+    "port": 18081,
+    "network": "clearnet",
+    "operator": "community-listed"
+  },
+  {
+    "host": "monero.openinternet.io",
+    "port": 443,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "tls": true
+  },
+  {
+    "host": "monero.sphinxlogic.com",
+    "port": 18089,
+    "network": "clearnet",
+    "operator": "community-listed"
+  },
+  {
+    "host": "monerodice.pro",
+    "port": 18089,
+    "network": "clearnet",
+    "operator": "community-listed"
+  },
+  {
+    "host": "mony.st",
+    "port": 18081,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "region": "Amsterdam, NL",
+    "lat": 52.3730796,
+    "lon": 4.8924534
+  },
+  {
+    "host": "node.chaoswg.dev",
+    "port": 443,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "tls": true,
+    "region": "DE",
+    "lat": 51.1638175,
+    "lon": 10.4478313
+  },
+  {
+    "host": "node.kyc.rip",
+    "port": 443,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "tls": true
+  },
+  {
+    "host": "node.media-vm.de",
+    "port": 18081,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "region": "DE",
+    "lat": 51.1638175,
+    "lon": 10.4478313
+  },
+  {
+    "host": "node.mon3ro.com",
+    "port": 443,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "tls": true
+  },
+  {
+    "host": "node.monero.fail",
+    "port": 443,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "tls": true,
+    "region": "US",
+    "lat": 39.7837304,
+    "lon": -100.445882
+  },
+  {
+    "host": "node.monerodevs.org",
+    "port": 18089,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "region": "CA",
+    "lat": 61.0666922,
+    "lon": -107.991707
+  },
+  {
+    "host": "node.monerosafe.com",
+    "port": 443,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "tls": true,
+    "region": "FR",
+    "lat": 46.603354,
+    "lon": 1.8883335
+  },
+  {
+    "host": "node.privacyx.co",
+    "port": 443,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "tls": true
+  },
+  {
+    "host": "node.richfowler.net",
+    "port": 18089,
+    "network": "clearnet",
+    "operator": "community-listed"
+  },
+  {
+    "host": "node.wagyu.xyz",
+    "port": 443,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "tls": true,
+    "region": "Reykjavik, IS",
+    "lat": 64.1401832,
+    "lon": -21.9539633
+  },
+  {
+    "host": "node.xmr.indst.eu",
+    "port": 443,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "tls": true,
+    "region": "FR",
+    "lat": 46.603354,
+    "lon": 1.8883335
+  },
+  {
+    "host": "node.xmr.pub",
+    "port": 443,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "tls": true,
+    "region": "US",
+    "lat": 39.7837304,
+    "lon": -100.445882
+  },
+  {
+    "host": "node.xmr.surf",
+    "port": 443,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "tls": true,
+    "region": "US",
+    "lat": 39.7837304,
+    "lon": -100.445882
+  },
+  {
+    "host": "node1.getmonero.us",
+    "port": 18081,
+    "network": "clearnet",
+    "operator": "community-listed"
+  },
+  {
+    "host": "node1.xmr-tw.org",
+    "port": 18081,
+    "network": "clearnet",
+    "operator": "community-listed"
+  },
+  {
+    "host": "node2.monerodevs.org",
+    "port": 18089,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "region": "FR",
+    "lat": 46.603354,
+    "lon": 1.8883335
+  },
+  {
+    "host": "node3-us.monero.love",
+    "port": 18081,
+    "network": "clearnet",
+    "operator": "community-listed"
+  },
+  {
+    "host": "node3.monerodevs.org",
+    "port": 18089,
+    "network": "clearnet",
+    "operator": "community-listed"
+  },
+  {
+    "host": "owl.lc",
+    "port": 18089,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "region": "DE",
+    "lat": 51.1638175,
+    "lon": 10.4478313
+  },
+  {
+    "host": "pinodexmr.hopto.org",
+    "port": 18081,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "region": "Witney, GB",
+    "lat": 51.7838848,
+    "lon": -1.4852861
+  },
+  {
+    "host": "proxmox.izvne.com",
+    "port": 18081,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "region": "LV",
+    "lat": 56.8406494,
+    "lon": 24.7537645
+  },
+  {
+    "host": "rev-140-131.legacytubes.illyse.net",
+    "port": 18089,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "region": "Les Cotes-d'Arey, FR",
+    "lat": 45.456659,
+    "lon": 4.868094
+  },
+  {
+    "host": "rpc.monerosafe.com",
+    "port": 443,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "tls": true,
+    "region": "FR",
+    "lat": 46.603354,
+    "lon": 1.8883335
+  },
+  {
+    "host": "static.63.34.245.188.clients.your-server.de",
+    "port": 18089,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "region": "DE",
+    "lat": 51.1638175,
+    "lon": 10.4478313
+  },
+  {
+    "host": "suigintou.middlendian.com",
+    "port": 18089,
+    "network": "clearnet",
+    "operator": "community-listed"
+  },
+  {
+    "host": "tor-exit-223.for-privacy.net",
+    "port": 18081,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "region": "DE",
+    "lat": 51.1638175,
+    "lon": 10.4478313
+  },
+  {
+    "host": "wakkawakka.duckdns.org",
+    "port": 6977,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "tls": true,
+    "region": "US",
+    "lat": 39.7837304,
+    "lon": -100.445882
+  },
+  {
+    "host": "xmr-01.tari.com",
+    "port": 443,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "tls": true
+  },
+  {
+    "host": "xmr-au-1.cryptovps.io",
+    "port": 443,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "tls": true
+  },
+  {
+    "host": "xmr-berlin.privacyfirst.digital",
+    "port": 18089,
+    "network": "clearnet",
+    "operator": "community-listed"
+  },
+  {
+    "host": "xmr-bhs.tari.com",
+    "port": 443,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "tls": true
+  },
+  {
+    "host": "xmr-de-2.boldsuck.org",
+    "port": 18081,
+    "network": "clearnet",
+    "operator": "community-listed"
+  },
+  {
+    "host": "xmr-de.boldsuck.org",
+    "port": 18081,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "region": "DE",
+    "lat": 51.1638175,
+    "lon": 10.4478313
+  },
+  {
+    "host": "xmr-full.p2pool.uk",
+    "port": 18089,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "region": "FR",
+    "lat": 46.603354,
+    "lon": 1.8883335
+  },
+  {
+    "host": "xmr-gra.tari.com",
+    "port": 443,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "tls": true,
+    "region": "Limburg an der Lahn, DE",
+    "lat": 50.3880447,
+    "lon": 8.063531
+  },
+  {
+    "host": "xmr-in-berlin-2.boldsuck.org",
+    "port": 18081,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "region": "DE",
+    "lat": 51.1638175,
+    "lon": 10.4478313
+  },
+  {
+    "host": "xmr-lim.tari.com",
+    "port": 443,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "tls": true,
+    "region": "Limburg an der Lahn, DE",
+    "lat": 50.3880447,
+    "lon": 8.063531
+  },
+  {
+    "host": "xmr-node.ddns.net",
+    "port": 18081,
+    "network": "clearnet",
+    "operator": "community-listed"
+  },
+  {
+    "host": "xmr-node.rbmpool.com",
+    "port": 18089,
+    "network": "clearnet",
+    "operator": "community-listed"
+  },
+  {
+    "host": "xmr.0xrpc.io",
+    "port": 443,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "tls": true
+  },
+  {
+    "host": "xmr.apschneider-it.eu",
+    "port": 443,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "tls": true,
+    "region": "DE",
+    "lat": 51.1638175,
+    "lon": 10.4478313
+  },
+  {
+    "host": "xmr.carlslab.de",
+    "port": 443,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "tls": true,
+    "region": "Helsinki, FI",
+    "lat": 60.1666204,
+    "lon": 24.9435408
+  },
+  {
+    "host": "xmr.ci.vet",
+    "port": 443,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "tls": true,
+    "region": "LT",
+    "lat": 55.3500003,
+    "lon": 23.7499997
+  },
+  {
+    "host": "xmr.cryptostorm.is",
+    "port": 18081,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "tls": true
+  },
+  {
+    "host": "xmr.diyarciftci.xyz",
+    "port": 18081,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "region": "AT",
+    "lat": 47.59397,
+    "lon": 14.12456
+  },
+  {
+    "host": "xmr.ducks.party",
+    "port": 443,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "tls": true,
+    "region": "AT",
+    "lat": 47.59397,
+    "lon": 14.12456
+  },
+  {
+    "host": "xmr.hexide.com",
+    "port": 443,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "tls": true
+  },
+  {
+    "host": "xmr.hostingwire.net",
+    "port": 443,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "tls": true
+  },
+  {
+    "host": "xmr.jayjonkman.nl",
+    "port": 18089,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "tls": true,
+    "region": "ES",
+    "lat": 39.3260685,
+    "lon": -4.8379791
+  },
+  {
+    "host": "xmr.kernel-panic.me",
+    "port": 18193,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "region": "CA",
+    "lat": 61.0666922,
+    "lon": -107.991707
+  },
+  {
+    "host": "xmr.litepay.ch",
+    "port": 18081,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "region": "BZ",
+    "lat": 17.1204943,
+    "lon": -88.6859028
+  },
+  {
+    "host": "xmr.marritt.ca",
+    "port": 443,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "tls": true
+  },
+  {
+    "host": "xmr.monerodice.pro",
+    "port": 18089,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "region": "Los Angeles, US",
+    "lat": 34.0536923,
+    "lon": -118.2427676
+  },
+  {
+    "host": "xmr.mony.st",
+    "port": 443,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "tls": true,
+    "region": "Amsterdam, NL",
+    "lat": 52.3730796,
+    "lon": 4.8924534
+  },
+  {
+    "host": "xmr.okade.pro",
+    "port": 443,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "tls": true
+  },
+  {
+    "host": "xmr.privacygateway.io",
+    "port": 443,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "tls": true,
+    "region": "D\u00fcsseldorf, DE",
+    "lat": 51.2254018,
+    "lon": 6.7763137
+  },
+  {
+    "host": "xmr.saxemberg.com",
+    "port": 18089,
+    "network": "clearnet",
+    "operator": "community-listed"
+  },
+  {
+    "host": "xmr.stormycloud.org",
+    "port": 18089,
+    "network": "clearnet",
+    "operator": "community-listed"
+  },
+  {
+    "host": "xmr.support",
+    "port": 18089,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "tls": true
+  },
+  {
+    "host": "xmr.surveillance.monster",
+    "port": 443,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "tls": true,
+    "region": "Frankfurt am Main, DE",
+    "lat": 50.1106444,
+    "lon": 8.6820917
+  },
+  {
+    "host": "xmr.thinhhv.com",
+    "port": 443,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "tls": true
+  },
+  {
+    "host": "xmr.unfilteredrealm.com",
+    "port": 443,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "tls": true
+  },
+  {
+    "host": "xmr.unshakled.net",
+    "port": 443,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "tls": true
+  },
+  {
+    "host": "xmr.visnova.pl",
+    "port": 443,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "tls": true,
+    "region": "Katowice, PL",
+    "lat": 50.2598987,
+    "lon": 19.0215852
+  },
+  {
+    "host": "xmr.vvv.systems",
+    "port": 443,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "tls": true
+  },
+  {
+    "host": "xmr1.doggett.tech",
+    "port": 18089,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "tls": true,
+    "region": "Montreal, CA",
+    "lat": 45.5031824,
+    "lon": -73.5698065
+  },
+  {
+    "host": "xmr2.doggett.tech",
+    "port": 18089,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "tls": true
+  },
+  {
+    "host": "xmr3.doggett.tech",
+    "port": 18089,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "tls": true
+  },
+  {
+    "host": "xmr4.doggett.tech",
+    "port": 18089,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "tls": true,
+    "region": "Silver Spring, US",
+    "lat": 38.9997621,
+    "lon": -77.0240371
+  },
+  {
+    "host": "xmr5.doggett.tech",
+    "port": 18089,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "tls": true,
+    "region": "DE",
+    "lat": 51.1638175,
+    "lon": 10.4478313
+  },
+  {
+    "host": "xmrnode.thecorn.net",
+    "port": 443,
+    "network": "clearnet",
+    "operator": "community-listed",
+    "tls": true
+  }
+]
