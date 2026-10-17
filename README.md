@@ -25,6 +25,10 @@ This page coordinates the ceremony, participant by participant:
 5. **Sync** — loop `export_multisig_info` / `import_multisig_info` rounds until every wallet reports the setup complete.
 6. **Verify** — every participant pastes their final wallet address; the page confirms all addresses are identical before anyone funds the wallet.
 
+<p align="center">
+  <img src="setup-wizard.svg" alt="Setup Wizard — Configure your ceremony" width="600">
+</p>
+
 The **Node Hub** (`nodes.html`, merged from xmr-niblet) finds you a fast public node:
 
 - The page auto-tests on load: every node is pinged 3 times from your browser and ranked by median latency. A spinner shows while the test is running.
@@ -41,6 +45,10 @@ The **Spend coordinator** tab handles life after setup, signer by signer:
 3. **Sign** — each remaining signer loads the transaction file, adds their signature with `sign_multisig`, and marks themselves signed; the page counts signatures toward the threshold.
 4. **Broadcast** — once enough signatures are collected, anyone broadcasts with `submit_multisig`.
 5. **Done** — the transaction is on the network, and the spend is saved to the local history (amount, address, date) on the start screen.
+
+<p align="center">
+  <img src="spend-coordinator.svg" alt="Spend Coordinator — Spend from your multisig" width="600">
+</p>
 
 ## Node Hub
 
