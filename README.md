@@ -41,6 +41,31 @@ The **Spend coordinator** tab handles life after setup, signer by signer:
 4. **Broadcast** — once enough signatures are collected, anyone broadcasts with `submit_multisig`.
 5. **Done** — the transaction is on the network, and the spend is saved to the local history (amount, address, date) on the start screen.
 
+## Adding a node
+
+Pull requests welcome. Add an entry to `nodes.json`:
+
+```json
+{
+  "host": "node.example.com",
+  "port": 18089,
+  "network": "clearnet",
+  "operator": "Your name / org",
+  "region": "City, CC"
+}
+```
+
+- `network`: `"clearnet"`, `"onion"`, or `"i2p"`
+- `port`: `18089` is the standard restricted RPC port for public nodes
+- `tls`: set `true` only if the node serves RPC over HTTPS
+- `operator`: who runs it (optional but encouraged)
+- `region`: rough location, helps visitors pick nearby nodes (optional)
+- `lat` / `lon`: coordinates for the Map tab, geocoded from `region` (optional;
+  maintainers add them when a node is listed)
+
+Please only list nodes you run or that are publicly advertised by their
+operator. The hourly check automatically flags entries that stop responding.
+
 ## Safety model
 
 Fully stateless. No server, no accounts, no analytics. The multisig wizard makes no network calls at all; the node hub necessarily probes nodes from your browser and loads the map (Leaflet + OpenStreetMap tiles). The page never sees or asks for private keys or seed phrases — it only handles the public coordination strings that participants are supposed to share with each other anyway. Pasted CLI outputs are shape-checked (correct prefix, one unbroken line, hex body, sane minimum length) to catch copy-paste mistakes early. All cryptography happens in your own `monero-wallet-cli`. The ceremony isn't saved — every visit starts fresh. Only your spend history is kept in your browser's local storage (clear it from the Spend tab).
