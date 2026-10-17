@@ -307,7 +307,15 @@ const HEALTH_LABELS = { synced: 'Synced', behind: 'Behind', offline: 'Offline', 
 
 function initMap() {
   if (nodeState.map || typeof L === 'undefined') return;
-  nodeState.map = L.map('map', { worldCopyJump: true }).setView([25, 0], 2);
+  // Keep the world on screen: the view cannot be dragged past the world
+// edges, and the map cannot zoom out far enough for the world to float
+// in grey space (at zoom 3 the world is wider than the page).
+nodeState.map = L.map('map', {
+    worldCopyJump: true,
+    maxBounds: [[-90, -180], [90, 180]],
+    maxBoundsViscosity: 1.0,
+    minZoom: 3,
+  }).setView([25, 0], 3);
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 18,
     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
