@@ -25,7 +25,13 @@ This page coordinates the ceremony, participant by participant:
 5. **Sync** — loop `export_multisig_info` / `import_multisig_info` rounds until every wallet reports the setup complete.
 6. **Verify** — every participant pastes their final wallet address; the page confirms all addresses are identical before anyone funds the wallet.
 
-The **Spend coordinator** tab handles life after setup: propose a transaction (amount + destination address), collect each signer's signature, broadcast once enough are in — and keeps a local history of past spends (amount, address, date) on its start screen.
+The **Spend coordinator** tab handles life after setup, signer by signer:
+
+1. **Setup** — agree on M-of-N for this spend.
+2. **Propose** — one participant creates the transaction in `monero-wallet-cli`, adds the first signature with `sign_multisig`, and enters the amount + destination address on the page.
+3. **Sign** — each remaining signer loads the transaction file, adds their signature with `sign_multisig`, and marks themselves signed; the page counts signatures toward the threshold.
+4. **Broadcast** — once enough signatures are collected, anyone broadcasts with `submit_multisig`.
+5. **Done** — the transaction is on the network, and the spend is saved to the local history (amount, address, date) on the start screen.
 
 ## Safety model
 
