@@ -407,3 +407,43 @@ $('customHost').addEventListener('keydown', (e) => { if (e.key === 'Enter') test
 initNodeFilters();
 loadNodes();
 loadHealth();
+
+/* ---------- donate box (same behavior as the homepage box) ---------- */
+(function initDonateBox() {
+  var copyBtn = document.querySelector('#donate button.copy');
+  if (copyBtn) copyBtn.addEventListener('click', function () {
+    var addr = document.getElementById('donate-address');
+    copyText(addr ? addr.textContent : '', copyBtn);
+  });
+  var qr = document.getElementById('donate-qr');
+  if (!qr) return;
+  var trigger = qr.closest('.qr-wrap') || qr;
+  var overlay = null;
+  function close() {
+    if (overlay) { overlay.remove(); overlay = null; }
+    document.removeEventListener('keydown', onKey);
+  }
+  function onKey(e) { if (e.key === 'Escape') close(); }
+  function open() {
+    if (overlay) return;
+    overlay = document.createElement('div');
+    overlay.className = 'qr-lightbox';
+    var img = document.createElement('img');
+    img.alt = 'Monero donation QR code, enlarged';
+    img.src = qr.src;
+    var hint = document.createElement('p');
+    hint.textContent = 'Tap anywhere to close';
+    overlay.appendChild(img);
+    overlay.appendChild(hint);
+    overlay.addEventListener('click', close);
+    document.body.appendChild(overlay);
+    document.addEventListener('keydown', onKey);
+  }
+  trigger.setAttribute('tabindex', '0');
+  trigger.setAttribute('role', 'button');
+  trigger.setAttribute('aria-label', 'Enlarge donation QR code');
+  trigger.addEventListener('click', open);
+  trigger.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); }
+  });
+})();

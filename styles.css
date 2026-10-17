@@ -169,6 +169,8 @@ footer { text-align: center; margin-top: 2rem; }
 .qa-answer p { margin: 0; padding: 0 1rem 0.9rem; color: var(--muted); font-size: 0.95rem; }
 .donate-handle a { color: var(--text); font-weight: 700; text-decoration: none; }
 .donate-handle a:hover { color: var(--accent); text-decoration: underline; }
+/* Links that stay Monero orange in every state. */
+a.orange-link:link, a.orange-link:visited, a.orange-link:hover, a.orange-link:active { color: var(--accent); }
 /* ---- QR lightbox ---- */
 #donate-qr { cursor: zoom-in; }
 .qr-lightbox { position: fixed; inset: 0; z-index: 1000; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 0.75rem; background: rgba(0, 0, 0, 0.88); cursor: zoom-out; padding: 1.5rem; }
