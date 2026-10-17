@@ -55,6 +55,7 @@ async function loadNodes() {
     nodeState.nodes = [];
   }
   renderNodes();
+  if (document.body.dataset.standaloneNodes) nodeEnter('map');
 }
 
 async function loadHealth() {
@@ -132,10 +133,12 @@ async function nodeTestAll() {
   if (nodeState.testing || !nodeState.nodes.length) return;
   nodeState.testing = true;
   $('testBtn').disabled = true;
+  $('testSpinner').hidden = false;
   $('status').textContent = 'Probing nodes from your connection…';
   await Promise.all(nodeState.nodes.map(probeNode));
   nodeState.testing = false;
   $('testBtn').disabled = false;
+  $('testSpinner').hidden = true;
   const ok = [...nodeState.results.values()].filter((r) => r.ms !== null).length;
   $('status').textContent = ok
     ? `Done — ${ok}/${nodeState.nodes.length} nodes responded. Fastest healthy node first; copy the address into your wallet's remote node field.`

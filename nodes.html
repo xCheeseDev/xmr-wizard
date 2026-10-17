@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Node Hub — XMR Wizard</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2064%2064'%3E%3Ccircle%20cx%3D'32'%20cy%3D'32'%20r%3D'30'%20fill%3D'%23ff6600'%2F%3E%3Ctext%20x%3D'32'%20y%3D'44'%20font-size%3D'36'%20text-anchor%3D'middle'%20fill%3D'%2314100c'%20font-family%3D'sans-serif'%20font-weight%3D'bold'%3EM%3C%2Ftext%3E%3C%2Fsvg%3E">
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="nodes.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body data-standalone-nodes="1">
+  <header class="standalone-header">
+    <img class="standalone-mascot" src="niblet.svg" alt="Niblet, the node manager">
+    <div>
+      <h1>Node Hub</h1>
+      <p class="muted">Niblet — Node Manager</p>
+    </div>
+  </header>
+  <main>
+<section id="node-controls" class="panel">
+      <h2>Test your connection</h2>
+      <p>Every time you open the Node Map or Node List, every node gets pinged fresh from your browser and ranked by speed.</p>
+      <div class="test-row"><button id="testBtn">Test my connection</button><span id="testSpinner" class="spinner" hidden></span></div>
+      <div class="filters" role="group" aria-label="Network filter">
+        <button data-filter="all" class="chip active">All</button>
+        <button data-filter="clearnet" class="chip">Clearnet</button>
+        <button data-filter="onion" class="chip">Tor</button>
+        <button data-filter="i2p" class="chip">I2P</button>
+      </div>
+      <label class="check"><input type="checkbox" id="hideOffline" checked> Hide nodes that look offline</label>
+      <p id="status" class="status">Open the Node Map or Node List tab to test your connection &mdash; fresh ping every time.</p>
+      <p id="healthInfo" class="status muted"></p>
+    </section>
+<section id="panelList" class="panel">
+      <h2>Pick a node</h2>
+      <label class="select-label" for="nodeSelect">Pick a node &mdash; fastest healthy first</label>
+      <select id="nodeSelect" aria-label="Pick a node">
+        <option>Loading nodes&hellip;</option>
+      </select>
+      <div id="nodeDetail"></div>
+      <p class="footnote">The dropdown ranks nodes fastest healthy first. Ping is the median of 3 probes from your browser to the node&apos;s RPC port (6s timeout each). Health comes from an hourly automated check of each node&apos;s block height &mdash; it can&apos;t be faked by a fast connection. Onion nodes only work in Tor Browser; in a normal browser they&apos;ll show as timeout.</p>
+      <h3>Test a custom node</h3>
+      <p class="muted">Heard about a node that&apos;s not on the list? Check it directly.</p>
+      <div class="custom-row">
+        <input id="customHost" type="text" placeholder="node.example.com" autocomplete="off" spellcheck="false">
+        <input id="customPort" type="number" placeholder="18089" min="1" max="65535">
+        <button id="customBtn" class="secondary">Test</button>
+      </div>
+      <p id="customResult" class="status"></p>
+      <h3>How it works</h3>
+      <ul class="explainer">
+        <li><strong>Measured from you.</strong> Latency is probed from your own browser, because a node that&apos;s fast for someone else might be slow for you. Nothing is uploaded anywhere &mdash; the test traffic goes straight from your device to each node.</li>
+        <li><strong>Speed + health.</strong> A fast ping alone doesn&apos;t prove a node is usable, so an hourly automated check records every node&apos;s block height and version into <code>status.json</code>. Nodes that are offline or far behind the chain are pushed to the bottom.</li>
+        <li><strong>No backend.</strong> This page is static. The node list is a <code>nodes.json</code> file in the repo that anyone can improve with a pull request.</li>
+        <li><strong>Honest limits.</strong> Browsers block normal requests to node RPC ports, so the probe uses a timing trick (see README). The health data is only as fresh as the last hourly check. A synced node you connect to still sees your IP &mdash; the privacy note below applies.</li>
+      </ul>
+      <div class="privacy">
+        <h3>A privacy note</h3>
+        <p>A remote node can see your IP address and when you broadcast transactions. If that bothers you, use one of the Tor onion nodes (in Tor Browser) &mdash; or better yet, <a href="https://www.getmonero.org/resources/user-guides/running_your_own_node.html" target="_blank" rel="noopener">run your own node</a>. Your keys never touch this page either way.</p>
+      </div>
+    </section>
+<section id="panelMap" class="panel">
+      <h2>Node map</h2>
+      <div id="map" aria-label="Map of node locations"></div>
+      <p id="mapNote" class="footnote">Dots are colored by health: green synced, yellow behind, red offline, grey unknown. Click a dot for details and a copy button.</p>
+    </section>
+  </main>
+  <p class="standalone-back"><a href="index.html">Back to XMR Wizard</a></p>
+  <script src="nodes.js"></script>
+</body>
+</html>

@@ -176,3 +176,15 @@ button.mini:hover { border-color: var(--accent); }
   color: var(--text) !important;
   border-color: var(--node-border) !important;
 }
+
+/* ---- node manager mascot + test row ---- */
+.node-manager { display: flex; align-items: center; gap: 12px; margin: 2px 0 14px; }
+.node-manager-img { width: 56px; height: 56px; object-fit: cover; border-radius: 50%; border: 1px solid var(--node-border); }
+.test-row { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+
+/* ---- standalone nodes page ---- */
+.standalone-header { display: flex; align-items: center; gap: 16px; margin: 24px 0; }
+.standalone-mascot { width: 96px; height: 96px; object-fit: cover; border-radius: 50%; border: 1px solid var(--node-border); }
+.standalone-header h1 { margin: 0; }
+.standalone-header p { margin: 4px 0 0; }
+.standalone-back { margin: 8px 0 0; }
