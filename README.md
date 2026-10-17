@@ -115,8 +115,6 @@ python3 -m http.server 8000
 # then open http://localhost:8000
 ```
 
-Don't open `index.html` straight from disk — browsers block the Node Hub's data fetches from `file://`.
-
 ## Status
 
 Early development. The CLI command mapping in `app.js` follows the documented `monero-wallet-cli` multisig flow, validators check shape (MultisigV1 prefix, unbroken hex body, 128+ character minimum) — exact output shapes vary between Monero releases and still need checking against real CLI output. If you've done a Monero multisig setup by hand, that verification is the most valuable contribution right now.
