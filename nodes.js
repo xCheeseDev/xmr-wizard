@@ -29,6 +29,8 @@ const nodeState = {
   health: new Map(),  // "host:port" -> { state: 'synced'|'behind'|'offline'|'unknown', height, version, nettype }
   healthAt: null,
   testing: false,
+  testedOnce: false,
+  expanded: false,
   filter: 'all',
   hideOffline: true,
   activeTab: 'list',
@@ -137,6 +139,7 @@ async function nodeTestAll() {
   $('status').textContent = 'Probing nodes from your connection…';
   await Promise.all(nodeState.nodes.map(probeNode));
   nodeState.testing = false;
+  nodeState.testedOnce = true;
   $('testBtn').disabled = false;
   $('testSpinner').hidden = true;
   const ok = [...nodeState.results.values()].filter((r) => r.ms !== null).length;
@@ -241,20 +244,42 @@ function healthLabel(h) {
   return { synced: 'Synced', behind: 'Behind', offline: 'Offline', unknown: 'Unknown' }[h.state];
 }
 
-function renderNodes() {
+function displayRows() {
   const rows = sortedRows();
+  if (nodeState.expanded) return rows;
+  return rows.filter(({ r, h }) => h.state === 'synced' && r && r.ms !== null).slice(0, 10);
+}
+
+function renderNodes() {
+  // Nothing in the picker until a test has finished: no untested nodes,
+  // no stale results while a refresh is running.
+  if (nodeState.testing || !nodeState.testedOnce) {
+    $('nodeSelect').innerHTML = '';
+    renderDetail([]);
+    updateMap();
+    return;
+  }
+  const all = sortedRows();
+  const rows = displayRows();
   const select = $('nodeSelect');
-  // keep the user's pick if it's still in the filtered list, else take the top row
+  // keep the user's pick if it's still in the shown list, else take the top row
   if (!rows.some(({ n }) => nodeKey(n) === nodeState.selectedKey)) {
     nodeState.selectedKey = rows.length ? nodeKey(rows[0].n) : null;
   }
-  select.innerHTML = rows.length
-    ? rows.map(({ n, h }) => {
-        const key = nodeKey(n);
-        const label = `${key} — ${pingLabel(key)} · ${healthLabel(h)}`;
-        return `<option value="${esc(key)}"${key === nodeState.selectedKey ? ' selected' : ''}>${esc(label)}</option>`;
-      }).join('')
-    : '<option disabled>No nodes match this filter.</option>';
+  let opts = rows.map(({ n, h }) => {
+    const key = nodeKey(n);
+    const label = `${key} — ${pingLabel(key)} · ${healthLabel(h)}`;
+    return `<option value="${esc(key)}"${key === nodeState.selectedKey ? ' selected' : ''}>${esc(label)}</option>`;
+  }).join('');
+  if (!rows.length) {
+    opts = all.length
+      ? '<option disabled>No healthy synced nodes responded.</option>'
+      : '<option disabled>No nodes match this filter.</option>';
+  }
+  if (!nodeState.expanded && rows.length < all.length) {
+    opts += '<option value="__expand__">Show all nodes…</option>';
+  }
+  select.innerHTML = opts;
   renderDetail(rows);
   updateMap();
 }
@@ -388,7 +413,11 @@ function nodeFocusOnMap(key) {
 
 /* ---------- node hub init (no auto-test here — nodeEnter runs it) ---------- */
 $('testBtn').addEventListener('click', nodeTestAll);
-$('nodeSelect').addEventListener('change', (e) => { nodeState.selectedKey = e.target.value; renderNodes(); });
+$('nodeSelect').addEventListener('change', (e) => {
+  if (e.target.value === '__expand__') nodeState.expanded = true;
+  else nodeState.selectedKey = e.target.value;
+  renderNodes();
+});
 $('customBtn').addEventListener('click', testCustom);
 $('customHost').addEventListener('keydown', (e) => { if (e.key === 'Enter') testCustom(); });
 
