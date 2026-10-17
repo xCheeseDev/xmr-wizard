@@ -1,3 +1,9 @@
+<p align="center">
+  <a href="https://xcheesedev.github.io/xmr-wizard/">
+    <img src="logo.svg" width="200" alt="Monero Wizard logo">
+  </a>
+</p>
+
 # XMR Multisig Wizard
 
 A free web wizard that walks you through setting up a Monero multisig wallet, validates each step, coordinates the group, and will never touches your keys.
