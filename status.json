@@ -1,0 +1,258 @@
+{
+ "generated_at": "2026-10-16T23:39:05.242916+00:00",
+ "nodes": {
+  "node.moneroworld.com:18089": {
+   "ok": false,
+   "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
+   "checked_at": "2026-10-16T23:39:05.368855+00:00"
+  },
+  "opennode.xmr-tw.org:18089": {
+   "ok": true,
+   "height": 3785651,
+   "version": "",
+   "nettype": "mainnet",
+   "response_ms": 367,
+   "checked_at": "2026-10-16T23:39:05.736333+00:00"
+  },
+  "uwillrunanodesoon.moneroworld.com:18089": {
+   "ok": false,
+   "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
+   "checked_at": "2026-10-16T23:39:05.811759+00:00"
+  },
+  "node.xmrbackb.one:18081": {
+   "ok": false,
+   "error": "URLError: <urlopen error timed out>",
+   "checked_at": "2026-10-16T23:39:25.925137+00:00"
+  },
+  "node.xmr.to:18081": {
+   "ok": false,
+   "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
+   "checked_at": "2026-10-16T23:39:26.098537+00:00"
+  },
+  "nodes.hashvault.pro:18081": {
+   "ok": true,
+   "height": 3785651,
+   "version": "",
+   "nettype": "mainnet",
+   "response_ms": 344,
+   "checked_at": "2026-10-16T23:39:26.442997+00:00"
+  },
+  "node.supportxmr.com:18081": {
+   "ok": false,
+   "error": "URLError: <urlopen error timed out>",
+   "checked_at": "2026-10-16T23:39:36.502840+00:00"
+  },
+  "node.sethforprivacy.com:18089": {
+   "ok": true,
+   "height": 3785651,
+   "version": "",
+   "nettype": "mainnet",
+   "response_ms": 1212,
+   "checked_at": "2026-10-16T23:39:37.715898+00:00"
+  },
+  "xmr-node.cakewallet.com:18081": {
+   "ok": true,
+   "height": 3785651,
+   "version": "",
+   "nettype": "mainnet",
+   "response_ms": 984,
+   "checked_at": "2026-10-16T23:39:38.700904+00:00"
+  },
+  "nodex.monerujo.io:18081": {
+   "ok": true,
+   "height": 3785651,
+   "version": "",
+   "nettype": "mainnet",
+   "response_ms": 465,
+   "checked_at": "2026-10-16T23:39:39.166545+00:00"
+  },
+  "xmr.robmanfred.fail:18081": {
+   "ok": true,
+   "height": 3785651,
+   "version": "",
+   "nettype": "mainnet",
+   "response_ms": 443,
+   "checked_at": "2026-10-16T23:39:39.609755+00:00"
+  },
+  "xmr.unfit.ninja:18089": {
+   "ok": true,
+   "height": 3785651,
+   "version": "",
+   "nettype": "mainnet",
+   "response_ms": 460,
+   "checked_at": "2026-10-16T23:39:40.070392+00:00"
+  },
+  "guestvm.com:18089": {
+   "ok": false,
+   "error": "URLError: <urlopen error [Errno 111] Connection refused>",
+   "checked_at": "2026-10-16T23:39:40.180350+00:00"
+  },
+  "xmr.bowlman.net:18081": {
+   "ok": false,
+   "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
+   "checked_at": "2026-10-16T23:39:40.252055+00:00"
+  },
+  "monero.dyni.net:18081": {
+   "ok": true,
+   "height": 3785651,
+   "version": "",
+   "nettype": "mainnet",
+   "response_ms": 259,
+   "checked_at": "2026-10-16T23:39:40.511778+00:00"
+  },
+  "xmr.4d2.org:18081": {
+   "ok": true,
+   "height": 3785651,
+   "version": "",
+   "nettype": "mainnet",
+   "response_ms": 700,
+   "checked_at": "2026-10-16T23:39:41.212393+00:00"
+  },
+  "caninebear.com:18081": {
+   "ok": true,
+   "height": 3785651,
+   "version": "",
+   "nettype": "mainnet",
+   "response_ms": 525,
+   "checked_at": "2026-10-16T23:39:41.737756+00:00"
+  },
+  "xmrbandwagon.hopto.org:18081": {
+   "ok": true,
+   "height": 3785651,
+   "version": "",
+   "nettype": "mainnet",
+   "response_ms": 128,
+   "checked_at": "2026-10-16T23:39:41.866651+00:00"
+  },
+  "xmr.support:18081": {
+   "ok": true,
+   "height": 3785651,
+   "version": "",
+   "nettype": "mainnet",
+   "response_ms": 522,
+   "checked_at": "2026-10-16T23:39:42.389111+00:00"
+  },
+  "meatescargatoire.com:18089": {
+   "ok": true,
+   "height": 3785651,
+   "version": "",
+   "nettype": "mainnet",
+   "response_ms": 153,
+   "checked_at": "2026-10-16T23:39:42.542457+00:00"
+  },
+  "xmr.pants-on.net:18089": {
+   "ok": true,
+   "height": 3785651,
+   "version": "",
+   "nettype": "mainnet",
+   "response_ms": 481,
+   "checked_at": "2026-10-16T23:39:43.023948+00:00"
+  },
+  "xmr.jel.gay:18081": {
+   "ok": true,
+   "height": 3785651,
+   "version": "",
+   "nettype": "mainnet",
+   "response_ms": 863,
+   "checked_at": "2026-10-16T23:39:43.887128+00:00"
+  },
+  "monero.kitakawa.cat:18081": {
+   "ok": true,
+   "height": 3785651,
+   "version": "",
+   "nettype": "mainnet",
+   "response_ms": 523,
+   "checked_at": "2026-10-16T23:39:44.410582+00:00"
+  },
+  "alucardxmr.ydns.eu:18081": {
+   "ok": false,
+   "error": "URLError: <urlopen error timed out>",
+   "checked_at": "2026-10-16T23:39:55.023513+00:00"
+  },
+  "hantaan.fullm00n.de:18089": {
+   "ok": true,
+   "height": 3785651,
+   "version": "",
+   "nettype": "mainnet",
+   "response_ms": 400,
+   "checked_at": "2026-10-16T23:39:55.424237+00:00"
+  },
+  "monero.homelinux.org:18081": {
+   "ok": true,
+   "height": 3785651,
+   "version": "",
+   "nettype": "mainnet",
+   "response_ms": 630,
+   "checked_at": "2026-10-16T23:39:56.055248+00:00"
+  },
+  "edge7.servebeer.com:18089": {
+   "ok": true,
+   "height": 3785651,
+   "version": "",
+   "nettype": "mainnet",
+   "response_ms": 424,
+   "checked_at": "2026-10-16T23:39:56.480133+00:00"
+  },
+  "captrondo.onthewifi.com:18089": {
+   "ok": true,
+   "height": 3785651,
+   "version": "",
+   "nettype": "mainnet",
+   "response_ms": 329,
+   "checked_at": "2026-10-16T23:39:56.809749+00:00"
+  },
+  "xmr.ducks.party:18081": {
+   "ok": true,
+   "height": 3785651,
+   "version": "",
+   "nettype": "mainnet",
+   "response_ms": 523,
+   "checked_at": "2026-10-16T23:39:57.333281+00:00"
+  },
+  "legalise.it:18089": {
+   "ok": true,
+   "height": 3785651,
+   "version": "",
+   "nettype": "mainnet",
+   "response_ms": 817,
+   "checked_at": "2026-10-16T23:39:58.150724+00:00"
+  },
+  "xmr.privacy.cash:18081": {
+   "ok": true,
+   "height": 3785651,
+   "version": "",
+   "nettype": "mainnet",
+   "response_ms": 469,
+   "checked_at": "2026-10-16T23:39:58.620636+00:00"
+  },
+  "africa.monodes.fun:18089": {
+   "ok": false,
+   "error": "URLError: <urlopen error timed out>",
+   "checked_at": "2026-10-16T23:40:08.644811+00:00"
+  },
+  "xmr.nadeko.net:18081": {
+   "ok": true,
+   "height": 3785651,
+   "version": "",
+   "nettype": "mainnet",
+   "response_ms": 393,
+   "checked_at": "2026-10-16T23:40:09.038608+00:00"
+  },
+  "34.95.247.125:18081": {
+   "ok": true,
+   "height": 3785651,
+   "version": "",
+   "nettype": "mainnet",
+   "response_ms": 346,
+   "checked_at": "2026-10-16T23:40:09.385077+00:00"
+  },
+  "corny.cc:443": {
+   "ok": true,
+   "height": 3785651,
+   "version": "",
+   "nettype": "mainnet",
+   "response_ms": 412,
+   "checked_at": "2026-10-16T23:40:09.797599+00:00"
+  }
+ }
+}
