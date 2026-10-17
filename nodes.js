@@ -145,6 +145,7 @@ async function nodeTestAll() {
   $('status').textContent = ok
     ? `Done — ${ok}/${nodeState.nodes.length} nodes responded. Fastest healthy node first; copy the address into your wallet's remote node field.`
     : 'No nodes responded. Check your connection and try again.';
+  renderNodes();
 }
 
 async function testCustom() {
