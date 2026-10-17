@@ -235,3 +235,9 @@ button.back:hover { background: #8a3a00; }
 }
 #spend-history-list li b { color: var(--accent); margin-right: 0.4rem; }
 #spend-history-list li span { color: var(--muted); }
+
+/* ---- Nodes group: link to the standalone Node Hub page ---- */
+.nodes-group { display: inline-flex; align-items: center; gap: 8px; }
+.nodes-group-mascot { width: 42px; height: 42px; object-fit: cover; border-radius: 50%; border: 2px solid #3a2f26; }
+a.nodes-link { background: var(--panel); color: var(--muted); border: 2px solid #3a2f26; border-radius: 999px; padding: 0.9rem 2.75rem; font-size: 1.6rem; margin-top: 0; text-decoration: none; }
+a.nodes-link:hover { color: var(--text); background: #2a211a; }

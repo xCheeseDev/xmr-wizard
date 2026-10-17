@@ -364,27 +364,10 @@ function spendShow(name) {
   window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
-/* ---------- hub tabs: setup / spend / node map / node list ---------- */
+/* ---------- hub tabs: setup / spend ---------- */
 function hubShow(tab) {
   setTab(tab);
-  const nodeControls = document.getElementById("node-controls");
-  const panelList = document.getElementById("panelList");
-  const panelMap = document.getElementById("panelMap");
-  const hideNode = () => {
-    nodeControls.hidden = true;
-    panelList.hidden = true;
-    panelMap.hidden = true;
-  };
-  const hideWizard = () => {
-    for (const s of STEPS) document.getElementById("step-" + s).hidden = true;
-    document.querySelectorAll(".spend-panel").forEach((p) => { p.hidden = true; });
-    document.getElementById("progress").hidden = true;
-    document.getElementById("spend-progress").hidden = true;
-    document.getElementById("faq-setup").hidden = true;
-    document.getElementById("faq-spend").hidden = true;
-  };
   if (tab === "setup") {
-    hideNode();
     document.querySelectorAll(".spend-panel").forEach((p) => { p.hidden = true; });
     document.getElementById("spend-progress").hidden = true;
     document.getElementById("faq-setup").hidden = false;
@@ -394,17 +377,9 @@ function hubShow(tab) {
     return;
   }
   if (tab === "spend") {
-    hideNode();
     spendShow("intro");
     return;
   }
-  // Node Map / Node List: hide the wizard, show node UI, fresh test.
-  hideWizard();
-  nodeControls.hidden = false;
-  panelList.hidden = tab !== "list";
-  panelMap.hidden = tab !== "map";
-  if (typeof nodeEnter === "function") nodeEnter(tab);
-  window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
 function spendExit() {
@@ -581,7 +556,7 @@ initDonate();
 initQrLightbox();
 wireSpend();
 show(state.step || "setup");
-// Deep links: #map / #list open the node tabs (and run the fresh test).
+// Deep links: #map / #list now live on the standalone Node Hub page.
 if (location.hash === "#map" || location.hash === "#list") {
-  hubShow(location.hash.slice(1));
+  location.href = "nodes.html" + location.hash;
 }
