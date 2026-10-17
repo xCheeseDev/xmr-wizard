@@ -41,13 +41,6 @@ The **Spend coordinator** tab handles life after setup, signer by signer:
 4. **Broadcast** — once enough signatures are collected, anyone broadcasts with `submit_multisig`.
 5. **Done** — the transaction is on the network, and the spend is saved to the local history (amount, address, date) on the start screen.
 
-## Coming soon — Premium
-
-A separate Premium section is on the way.
-Ceremony Rooms — a private room keeps your group's multisig ceremony on track across days: it holds only the public coordination strings, validates each paste, and shows whose turn it is.
-Payment Proof — prove an XMR payment happened. Paste a transaction ID, transaction key, and recipient address, and get a receipt.
-Premium will be paid in XMR, with no accounts. The only reason it costs money is to pay for the backend needed to run these features. It stays off until the site moves off GitHub Pages, since rooms and verification need a small backend. The free wizard stays free and stateless.
-
 ## Safety model
 
 Fully stateless. No server, no accounts, no analytics. The multisig wizard makes no network calls at all; the node hub necessarily probes nodes from your browser and loads the map (Leaflet + OpenStreetMap tiles). The page never sees or asks for private keys or seed phrases — it only handles the public coordination strings that participants are supposed to share with each other anyway. Pasted CLI outputs are shape-checked (correct prefix, one unbroken line, hex body, sane minimum length) to catch copy-paste mistakes early. All cryptography happens in your own `monero-wallet-cli`. The ceremony isn't saved — every visit starts fresh. Only your spend history is kept in your browser's local storage (clear it from the Spend tab).
@@ -68,3 +61,10 @@ Early development. The CLI command mapping in `app.js` follows the documented `m
 ## Contributing
 
 Keep it stateless. The only vendored dependency is the QR code renderer (qrcode-generator, MIT). The map loads Leaflet from a CDN (the one exception) plus OpenStreetMap tiles. Any feature that would require a server, an account, or handling private key material is out of scope by design.
+
+## Coming soon — Premium
+
+A separate Premium section is on the way.
+Ceremony Rooms — a private room keeps your group's multisig ceremony on track across days: it holds only the public coordination strings, validates each paste, and shows whose turn it is.
+Payment Proof — prove an XMR payment happened. Paste a transaction ID, transaction key, and recipient address, and get a receipt.
+Premium will be paid in XMR, with no accounts. The only reason it costs money is to pay for the backend needed to run these features. It stays off until the site moves off GitHub Pages, since rooms and verification need a small backend. The free wizard stays free and stateless.
