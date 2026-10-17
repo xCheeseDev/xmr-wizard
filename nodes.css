@@ -190,5 +190,8 @@ button.mini:hover { border-color: var(--accent); }
 .standalone-back { margin: 8px 0 0; }
 
 .standalone-logo-link { margin-left: auto; display: flex; flex-direction: column; align-items: center; gap: 4px; text-decoration: none; }
-.standalone-logo { width: 72px; height: 72px; object-fit: cover; border-radius: 50%; border: 1px solid var(--node-border); }
-.standalone-logo-text { color: var(--accent); font-size: 13px; font-weight: 600; }
+.standalone-logo { width: 96px; height: 96px; object-fit: cover; border-radius: 50%; border: 1px solid var(--node-border); }
+.standalone-logo-text { color: var(--accent); font-size: 13px; font-weight: 600; white-space: nowrap; }
+/* Stay orange in every link state: plain class rules lose to the browser's
+   built-in :link/:visited colors and to styles.css a:hover, so cover them all. */
+.standalone-logo-link, .standalone-logo-link:link, .standalone-logo-link:visited, .standalone-logo-link:hover, .standalone-logo-link:active { color: var(--accent); text-decoration: none; }
