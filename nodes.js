@@ -240,6 +240,8 @@ function displayRows() {
 }
 
 function renderNodes() {
+  const syncEl = $('syncingNodes');
+  if (syncEl) syncEl.style.display = (nodeState.testing || !nodeState.testedOnce) ? '' : 'none';
   // Nothing in the list until a test has finished: no untested nodes,
   // no stale results while a refresh is running.
   const list = $('nodeList');
