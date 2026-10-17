@@ -23,7 +23,7 @@
     <p class="tagline-box">Add your own nodes to the Github repository! Search the map, and test an unlisted node all here!</p>
 <section id="node-controls" class="panel">
       <h2>Test your connection</h2>
-      <p>Every time you open the Node Map or Node List, every node gets pinged fresh from your browser and ranked by speed.</p>
+      <p>Every time you load this page or hit Test my connection, every node gets pinged fresh from your browser and ranked by speed.</p>
       <div class="test-row"><button id="testBtn">Test my connection</button><span id="testSpinner" class="spinner" hidden></span></div>
       <div class="filters" role="group" aria-label="Network filter">
         <button data-filter="all" class="chip active">All</button>
@@ -32,7 +32,7 @@
         <button data-filter="i2p" class="chip">I2P</button>
       </div>
       <label class="check"><input type="checkbox" id="hideOffline" checked> Hide nodes that look offline</label>
-      <p id="status" class="status">Open the Node Map or Node List tab to test your connection &mdash; fresh ping every time.</p>
+      <p id="status" class="status">Testing your connection &mdash; fresh ping every time.</p>
       <p id="healthInfo" class="status muted"></p>
     </section>
 <section id="panelList" class="panel">
@@ -53,11 +53,11 @@
         <li><strong>Measured from you.</strong> Latency is probed from your own browser, because a node that&apos;s fast for someone else might be slow for you. Nothing is uploaded anywhere &mdash; the test traffic goes straight from your device to each node.</li>
         <li><strong>Speed + health.</strong> A fast ping alone doesn&apos;t prove a node is usable, so an hourly automated check records every node&apos;s block height and version into <code>status.json</code>. Nodes that are offline or far behind the chain are pushed to the bottom.</li>
         <li><strong>No backend.</strong> This page is static. The node list is a <code>nodes.json</code> file in the repo that anyone can improve with a pull request.</li>
-        <li><strong>Honest limits.</strong> Browsers block normal requests to node RPC ports, so the probe uses a timing trick (see README). The health data is only as fresh as the last hourly check. A synced node you connect to still sees your IP &mdash; the privacy note below applies.</li>
+        <li><strong>Honest limits.</strong> Browsers block normal requests to node RPC ports, so the probe uses a timing trick (see <a href="https://github.com/xCheeseDev/xmr-wizard" target="_blank" rel="noopener">README</a>). The health data is only as fresh as the last hourly check. A synced node you connect to still sees your IP &mdash; the privacy note below applies.</li>
       </ul>
       <div class="privacy">
         <h3>A privacy note</h3>
-        <p>A remote node can see your IP address and when you broadcast transactions. If that bothers you, use one of the Tor onion nodes (in Tor Browser) &mdash; or better yet, <a href="https://www.getmonero.org/resources/user-guides/running_your_own_node.html" target="_blank" rel="noopener">run your own node</a>. Your keys never touch this page either way.</p>
+        <p>A remote node can see your IP address and when you broadcast transactions. If that bothers you, use one of the Tor onion nodes (in Tor Browser) &mdash; or better yet, <a href="https://docs.getmonero.org/running-node/" target="_blank" rel="noopener">run your own node</a>. Your keys never touch this page either way.</p>
       </div>
     </section>
 <section id="panelMap" class="panel">

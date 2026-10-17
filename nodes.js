@@ -50,7 +50,7 @@ async function loadNodes() {
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     nodeState.nodes = await res.json();
     for (const n of nodeState.nodes) nodeState.results.set(nodeKey(n), { samples: [], ms: null, state: 'idle' });
-    $('status').textContent = `${nodeState.nodes.length} nodes loaded. Open the Node Map or Node List tab to test your connection — fresh ping every time.`;
+    $('status').textContent = `${nodeState.nodes.length} nodes loaded. Testing your connection — fresh ping every time.`;
   } catch (e) {
     $('status').textContent = `Could not load nodes.json (${e.message}). Serve this folder over HTTP or deploy it — file:// blocks the request.`;
     nodeState.nodes = [];
