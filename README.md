@@ -29,15 +29,6 @@ This page coordinates the ceremony, participant by participant:
   <img src="setup-wizard.svg" alt="Setup Wizard — Configure your ceremony" width="600">
 </p>
 
-The **Node Hub** (`nodes.html`, merged from xmr-niblet) finds you a fast public node:
-
-- The page auto-tests on load: every node is pinged 3 times from your browser and ranked by median latency. A spinner shows while the test is running.
-- The list shows the 10 fastest healthy-synced responders first, with a **Show all N nodes** toggle for the full list. Health comes from an hourly automated check (`status.json`: block height, version, reachability) so a fast-but-dead node never tops the ranking.
-- Filter chips (All / Clearnet / Tor / I2P) and a Hide-offline checkbox narrow the list and map.
-- The map plots nodes colored by health, with a popup + copy button per node. Each list row has a **Show on map** button linking the two views.
-- A custom-node tester lets you check any host:port not on the list.
-- It is linked from the homepage Nodes box ("See Node Map"). Niblet, the rice-ball node manager, watches over the node section.
-
 The **Spend coordinator** tab handles life after setup, signer by signer:
 
 1. **Setup** — agree on M-of-N for this spend.
@@ -49,6 +40,15 @@ The **Spend coordinator** tab handles life after setup, signer by signer:
 <p align="center">
   <img src="spend-coordinator.svg" alt="Spend Coordinator — Spend from your multisig" width="600">
 </p>
+
+The **Node Hub** (`nodes.html`, merged from xmr-niblet) finds you a fast public node:
+
+- The page auto-tests on load: every node is pinged 3 times from your browser and ranked by median latency. A spinner shows while the test is running.
+- The list shows the 10 fastest healthy-synced responders first, with a **Show all N nodes** toggle for the full list. Health comes from an hourly automated check (`status.json`: block height, version, reachability) so a fast-but-dead node never tops the ranking.
+- Filter chips (All / Clearnet / Tor / I2P) and a Hide-offline checkbox narrow the list and map.
+- The map plots nodes colored by health, with a popup + copy button per node. Each list row has a **Show on map** button linking the two views.
+- A custom-node tester lets you check any host:port not on the list.
+- It is linked from the homepage Nodes box ("See Node Map"). Niblet, the rice-ball node manager, watches over the node section.
 
 ## Node Hub
 
