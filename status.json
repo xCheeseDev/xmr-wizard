@@ -1,1013 +1,1010 @@
 {
- "generated_at": "2026-10-18T18:05:42.868709+00:00",
+ "generated_at": "2026-10-18T20:43:10.380493+00:00",
  "nodes": {
   "node.moneroworld.com:18089": {
    "ok": false,
    "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
-   "checked_at": "2026-10-18T18:05:43.021396+00:00"
+   "checked_at": "2026-10-18T20:43:10.478649+00:00"
   },
   "opennode.xmr-tw.org:18089": {
    "ok": true,
-   "height": 3786917,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 151,
-   "checked_at": "2026-10-18T18:05:43.172639+00:00"
+   "response_ms": 342,
+   "checked_at": "2026-10-18T20:43:10.821645+00:00"
   },
   "uwillrunanodesoon.moneroworld.com:18089": {
    "ok": false,
    "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
-   "checked_at": "2026-10-18T18:05:43.244257+00:00"
+   "checked_at": "2026-10-18T20:43:10.906064+00:00"
   },
   "node.xmrbackb.one:18081": {
    "ok": false,
-   "error": "URLError: <urlopen error [Errno 111] Connection refused>",
-   "checked_at": "2026-10-18T18:05:43.318092+00:00"
+   "error": "URLError: <urlopen error timed out>",
+   "checked_at": "2026-10-18T20:43:20.964392+00:00"
   },
   "node.xmr.to:18081": {
    "ok": false,
    "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
-   "checked_at": "2026-10-18T18:05:43.456179+00:00"
+   "checked_at": "2026-10-18T20:43:21.156421+00:00"
   },
   "nodes.hashvault.pro:18081": {
    "ok": true,
-   "height": 3786917,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 304,
-   "checked_at": "2026-10-18T18:05:43.760626+00:00"
+   "response_ms": 463,
+   "checked_at": "2026-10-18T20:43:21.620090+00:00"
   },
   "node.supportxmr.com:18081": {
    "ok": false,
    "error": "URLError: <urlopen error timed out>",
-   "checked_at": "2026-10-18T18:05:53.811956+00:00"
+   "checked_at": "2026-10-18T20:43:31.663304+00:00"
   },
   "node.sethforprivacy.com:18089": {
    "ok": true,
-   "height": 3786917,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 768,
-   "checked_at": "2026-10-18T18:05:54.580586+00:00"
+   "response_ms": 1041,
+   "checked_at": "2026-10-18T20:43:32.704604+00:00"
   },
   "xmr-node.cakewallet.com:18081": {
    "ok": true,
-   "height": 3786917,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 103,
-   "checked_at": "2026-10-18T18:05:54.684564+00:00"
+   "response_ms": 954,
+   "checked_at": "2026-10-18T20:43:33.659596+00:00"
   },
   "nodex.monerujo.io:18081": {
    "ok": true,
-   "height": 3786917,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 318,
-   "checked_at": "2026-10-18T18:05:55.003570+00:00"
+   "response_ms": 304,
+   "checked_at": "2026-10-18T20:43:33.963806+00:00"
   },
   "xmr.robmanfred.fail:18081": {
    "ok": true,
-   "height": 3786918,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 260,
-   "checked_at": "2026-10-18T18:05:55.263897+00:00"
+   "response_ms": 366,
+   "checked_at": "2026-10-18T20:43:34.330322+00:00"
   },
   "xmr.unfit.ninja:18089": {
    "ok": true,
-   "height": 3786918,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 258,
-   "checked_at": "2026-10-18T18:05:55.522526+00:00"
+   "response_ms": 267,
+   "checked_at": "2026-10-18T20:43:34.597846+00:00"
   },
   "guestvm.com:18089": {
    "ok": true,
-   "height": 3786918,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 173,
-   "checked_at": "2026-10-18T18:05:55.695654+00:00"
+   "response_ms": 182,
+   "checked_at": "2026-10-18T20:43:34.780538+00:00"
   },
   "xmr.bowlman.net:18081": {
    "ok": false,
    "error": "URLError: <urlopen error [Errno -2] Name or service not known>",
-   "checked_at": "2026-10-18T18:05:55.750236+00:00"
+   "checked_at": "2026-10-18T20:43:34.858306+00:00"
   },
   "monero.dyni.net:18081": {
    "ok": false,
    "error": "RemoteDisconnected: Remote end closed connection without response",
-   "checked_at": "2026-10-18T18:05:55.833935+00:00"
+   "checked_at": "2026-10-18T20:43:35.128088+00:00"
   },
   "xmr.4d2.org:18081": {
    "ok": true,
-   "height": 3786918,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 559,
-   "checked_at": "2026-10-18T18:05:56.393824+00:00"
+   "response_ms": 555,
+   "checked_at": "2026-10-18T20:43:35.683962+00:00"
   },
   "caninebear.com:18081": {
    "ok": true,
-   "height": 3786918,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 138,
-   "checked_at": "2026-10-18T18:05:56.532358+00:00"
+   "response_ms": 1616,
+   "checked_at": "2026-10-18T20:43:37.300562+00:00"
   },
   "xmrbandwagon.hopto.org:18081": {
    "ok": true,
-   "height": 3786918,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 296,
-   "checked_at": "2026-10-18T18:05:56.828789+00:00"
+   "response_ms": 346,
+   "checked_at": "2026-10-18T20:43:37.646657+00:00"
   },
   "xmr.support:18081": {
    "ok": true,
-   "height": 3786918,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 219,
-   "checked_at": "2026-10-18T18:05:57.047859+00:00"
+   "response_ms": 463,
+   "checked_at": "2026-10-18T20:43:38.110046+00:00"
   },
   "meatescargatoire.com:18089": {
    "ok": true,
-   "height": 3786918,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 142,
-   "checked_at": "2026-10-18T18:05:57.190470+00:00"
+   "response_ms": 146,
+   "checked_at": "2026-10-18T20:43:38.256233+00:00"
   },
   "xmr.pants-on.net:18089": {
    "ok": true,
-   "height": 3786918,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 843,
-   "checked_at": "2026-10-18T18:05:58.033583+00:00"
+   "response_ms": 403,
+   "checked_at": "2026-10-18T20:43:38.660088+00:00"
   },
   "xmr.jel.gay:18081": {
    "ok": true,
-   "height": 3786918,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 1036,
-   "checked_at": "2026-10-18T18:05:59.070632+00:00"
+   "response_ms": 1126,
+   "checked_at": "2026-10-18T20:43:39.786939+00:00"
   },
   "monero.kitakawa.cat:18081": {
    "ok": true,
-   "height": 3786918,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 362,
-   "checked_at": "2026-10-18T18:05:59.433062+00:00"
+   "response_ms": 498,
+   "checked_at": "2026-10-18T20:43:40.285371+00:00"
   },
   "alucardxmr.ydns.eu:18081": {
    "ok": true,
-   "height": 3786918,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 537,
-   "checked_at": "2026-10-18T18:05:59.971001+00:00"
+   "response_ms": 687,
+   "checked_at": "2026-10-18T20:43:40.973241+00:00"
   },
   "hantaan.fullm00n.de:18089": {
    "ok": true,
-   "height": 3786918,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 411,
-   "checked_at": "2026-10-18T18:06:00.382893+00:00"
+   "response_ms": 659,
+   "checked_at": "2026-10-18T20:43:41.633166+00:00"
   },
   "monero.homelinux.org:18081": {
    "ok": true,
-   "height": 3786918,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 343,
-   "checked_at": "2026-10-18T18:06:00.725958+00:00"
+   "response_ms": 549,
+   "checked_at": "2026-10-18T20:43:42.182669+00:00"
   },
   "edge7.servebeer.com:18089": {
    "ok": true,
-   "height": 3786918,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 221,
-   "checked_at": "2026-10-18T18:06:00.947709+00:00"
+   "response_ms": 393,
+   "checked_at": "2026-10-18T20:43:42.576587+00:00"
   },
   "captrondo.onthewifi.com:18089": {
    "ok": true,
-   "height": 3786918,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 238,
-   "checked_at": "2026-10-18T18:06:01.185858+00:00"
+   "response_ms": 341,
+   "checked_at": "2026-10-18T20:43:42.918597+00:00"
   },
   "xmr.ducks.party:18081": {
    "ok": true,
-   "height": 3786918,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 195,
-   "checked_at": "2026-10-18T18:06:01.381404+00:00"
+   "response_ms": 912,
+   "checked_at": "2026-10-18T20:43:43.831249+00:00"
   },
   "legalise.it:18089": {
    "ok": true,
-   "height": 3786918,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 431,
-   "checked_at": "2026-10-18T18:06:01.812467+00:00"
+   "response_ms": 567,
+   "checked_at": "2026-10-18T20:43:44.398619+00:00"
   },
   "xmr.privacy.cash:18081": {
    "ok": true,
-   "height": 3786918,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 108,
-   "checked_at": "2026-10-18T18:06:01.921445+00:00"
+   "response_ms": 456,
+   "checked_at": "2026-10-18T20:43:44.855656+00:00"
   },
   "africa.monodes.fun:18089": {
    "ok": false,
    "error": "URLError: <urlopen error timed out>",
-   "checked_at": "2026-10-18T18:06:11.952761+00:00"
+   "checked_at": "2026-10-18T20:43:54.919775+00:00"
   },
   "xmr.nadeko.net:18081": {
    "ok": true,
-   "height": 3786918,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 316,
-   "checked_at": "2026-10-18T18:06:12.269084+00:00"
+   "response_ms": 321,
+   "checked_at": "2026-10-18T20:43:55.240870+00:00"
   },
   "34.95.247.125:18081": {
    "ok": true,
-   "height": 3786918,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 235,
-   "checked_at": "2026-10-18T18:06:12.505039+00:00"
+   "response_ms": 315,
+   "checked_at": "2026-10-18T20:43:55.556371+00:00"
   },
   "corny.cc:443": {
    "ok": true,
-   "height": 3786918,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 616,
-   "checked_at": "2026-10-18T18:06:13.121152+00:00"
+   "response_ms": 773,
+   "checked_at": "2026-10-18T20:43:56.330382+00:00"
   },
   "0x255.xyz:18081": {
    "ok": true,
-   "height": 3786918,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 199,
-   "checked_at": "2026-10-18T18:06:13.320837+00:00"
+   "response_ms": 770,
+   "checked_at": "2026-10-18T20:43:57.100757+00:00"
   },
   "38533.airdns.org:38533": {
    "ok": true,
-   "height": 3786918,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 1499,
-   "checked_at": "2026-10-18T18:06:14.820615+00:00"
+   "response_ms": 841,
+   "checked_at": "2026-10-18T20:43:57.941848+00:00"
   },
   "anstee.dev:18081": {
    "ok": true,
-   "height": 3786918,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 332,
-   "checked_at": "2026-10-18T18:06:15.153447+00:00"
+   "response_ms": 1032,
+   "checked_at": "2026-10-18T20:43:58.974783+00:00"
   },
   "atm.rabbithole2.net:18089": {
    "ok": true,
-   "height": 3786918,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 247,
-   "checked_at": "2026-10-18T18:06:15.400557+00:00"
+   "response_ms": 368,
+   "checked_at": "2026-10-18T20:43:59.343462+00:00"
   },
   "chad.fiatfaucet.com:443": {
    "ok": true,
-   "height": 3786918,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 297,
-   "checked_at": "2026-10-18T18:06:15.698008+00:00"
+   "response_ms": 95,
+   "checked_at": "2026-10-18T20:43:59.439034+00:00"
   },
   "connect.xmr-node.org:443": {
    "ok": true,
-   "height": 3786918,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 555,
-   "checked_at": "2026-10-18T18:06:16.254035+00:00"
+   "response_ms": 536,
+   "checked_at": "2026-10-18T20:43:59.975893+00:00"
   },
   "dewitte.fiatfaucet.com:443": {
    "ok": true,
-   "height": 3786918,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 306,
-   "checked_at": "2026-10-18T18:06:16.560369+00:00"
+   "response_ms": 438,
+   "checked_at": "2026-10-18T20:44:00.414320+00:00"
   },
   "kowalski.fiatfaucet.com:443": {
    "ok": true,
-   "height": 3786918,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 337,
-   "checked_at": "2026-10-18T18:06:16.898411+00:00"
+   "response_ms": 418,
+   "checked_at": "2026-10-18T20:44:00.832556+00:00"
   },
   "kuk.fan:18089": {
    "ok": true,
-   "height": 3786918,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 2045,
-   "checked_at": "2026-10-18T18:06:18.943799+00:00"
+   "response_ms": 1849,
+   "checked_at": "2026-10-18T20:44:02.682570+00:00"
   },
   "ldn1.derp.anstee.dev:18081": {
    "ok": true,
-   "height": 3786918,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 254,
-   "checked_at": "2026-10-18T18:06:19.198417+00:00"
+   "response_ms": 570,
+   "checked_at": "2026-10-18T20:44:03.253607+00:00"
   },
   "mainnet.xmr.kernal.eu:18089": {
    "ok": true,
-   "height": 3786918,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 566,
-   "checked_at": "2026-10-18T18:06:19.764725+00:00"
+   "response_ms": 376,
+   "checked_at": "2026-10-18T20:44:03.630276+00:00"
   },
   "monero-rpc.cheems.de.box.skhron.com.ua:18089": {
    "ok": true,
-   "height": 3786918,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 492,
-   "checked_at": "2026-10-18T18:06:20.256906+00:00"
+   "response_ms": 869,
+   "checked_at": "2026-10-18T20:44:04.499813+00:00"
   },
   "monero.anycolo.net:18081": {
    "ok": true,
-   "height": 3786918,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 282,
-   "checked_at": "2026-10-18T18:06:20.539699+00:00"
+   "response_ms": 374,
+   "checked_at": "2026-10-18T20:44:04.874534+00:00"
   },
   "monero.bowlman.net:18081": {
    "ok": true,
-   "height": 3786918,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 115,
-   "checked_at": "2026-10-18T18:06:20.655356+00:00"
+   "response_ms": 197,
+   "checked_at": "2026-10-18T20:44:05.071653+00:00"
   },
   "monero.definitelynotafed.com:443": {
    "ok": true,
-   "height": 3786918,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 136,
-   "checked_at": "2026-10-18T18:06:20.792191+00:00"
+   "response_ms": 264,
+   "checked_at": "2026-10-18T20:44:05.336575+00:00"
   },
   "monero.econanon.com:443": {
    "ok": false,
    "error": "HTTPError: HTTP Error 400: Bad Request",
-   "checked_at": "2026-10-18T18:06:20.869620+00:00"
+   "checked_at": "2026-10-18T20:44:05.456360+00:00"
   },
   "monero.forked.net:18089": {
    "ok": true,
-   "height": 3786918,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 348,
-   "checked_at": "2026-10-18T18:06:21.218125+00:00"
+   "response_ms": 75,
+   "checked_at": "2026-10-18T20:44:05.531574+00:00"
   },
   "monero.heki.me:18089": {
    "ok": true,
-   "height": 3786918,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 405,
-   "checked_at": "2026-10-18T18:06:21.623949+00:00"
+   "response_ms": 359,
+   "checked_at": "2026-10-18T20:44:05.891100+00:00"
   },
   "monero.hexalink.xyz:18081": {
    "ok": true,
-   "height": 3786918,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 493,
-   "checked_at": "2026-10-18T18:06:22.117574+00:00"
+   "response_ms": 431,
+   "checked_at": "2026-10-18T20:44:06.322277+00:00"
   },
   "monero.kaythomas.dev:18089": {
    "ok": true,
-   "height": 3786918,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 88,
-   "checked_at": "2026-10-18T18:06:22.205922+00:00"
+   "response_ms": 216,
+   "checked_at": "2026-10-18T20:44:06.538432+00:00"
   },
   "monero.konku.rs:18089": {
    "ok": true,
-   "height": 3786918,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 221,
-   "checked_at": "2026-10-18T18:06:22.427205+00:00"
+   "response_ms": 340,
+   "checked_at": "2026-10-18T20:44:06.878630+00:00"
   },
   "monero.mullvad.net:18081": {
    "ok": true,
-   "height": 3786918,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 243,
-   "checked_at": "2026-10-18T18:06:22.670754+00:00"
+   "response_ms": 477,
+   "checked_at": "2026-10-18T20:44:07.356624+00:00"
   },
   "monero.openinternet.io:443": {
    "ok": true,
-   "height": 3786918,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 548,
-   "checked_at": "2026-10-18T18:06:23.219576+00:00"
+   "response_ms": 323,
+   "checked_at": "2026-10-18T20:44:07.679832+00:00"
   },
   "monero.sphinxlogic.com:18089": {
    "ok": true,
-   "height": 3786918,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 82,
-   "checked_at": "2026-10-18T18:06:23.302154+00:00"
+   "response_ms": 180,
+   "checked_at": "2026-10-18T20:44:07.860630+00:00"
   },
   "monerodice.pro:18089": {
    "ok": true,
-   "height": 3786919,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 373,
-   "checked_at": "2026-10-18T18:06:23.676085+00:00"
+   "response_ms": 348,
+   "checked_at": "2026-10-18T20:44:08.208772+00:00"
   },
   "mony.st:18081": {
    "ok": true,
-   "height": 3786919,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 528,
-   "checked_at": "2026-10-18T18:06:24.204661+00:00"
+   "response_ms": 934,
+   "checked_at": "2026-10-18T20:44:09.143062+00:00"
   },
   "node.chaoswg.dev:443": {
    "ok": true,
-   "height": 3786920,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 485,
-   "checked_at": "2026-10-18T18:06:24.690102+00:00"
+   "response_ms": 624,
+   "checked_at": "2026-10-18T20:44:09.767764+00:00"
   },
   "node.kyc.rip:443": {
    "ok": false,
    "error": "HTTPError: HTTP Error 400: Bad Request",
-   "checked_at": "2026-10-18T18:06:24.784335+00:00"
+   "checked_at": "2026-10-18T20:44:10.000539+00:00"
   },
   "node.media-vm.de:18081": {
    "ok": true,
-   "height": 3786920,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 344,
-   "checked_at": "2026-10-18T18:06:25.128704+00:00"
+   "response_ms": 528,
+   "checked_at": "2026-10-18T20:44:10.528889+00:00"
   },
   "node.mon3ro.com:443": {
    "ok": true,
-   "height": 3786920,
+   "height": 3787010,
    "version": "0.18.5.3-release",
    "nettype": "mainnet",
-   "response_ms": 300,
-   "checked_at": "2026-10-18T18:06:25.428984+00:00"
+   "response_ms": 497,
+   "checked_at": "2026-10-18T20:44:11.026408+00:00"
   },
   "node.monero.fail:443": {
    "ok": true,
-   "height": 3786920,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 592,
-   "checked_at": "2026-10-18T18:06:26.021229+00:00"
+   "response_ms": 576,
+   "checked_at": "2026-10-18T20:44:11.603138+00:00"
   },
   "node.monerodevs.org:18089": {
    "ok": true,
-   "height": 3786920,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 200,
-   "checked_at": "2026-10-18T18:06:26.222180+00:00"
+   "response_ms": 517,
+   "checked_at": "2026-10-18T20:44:12.121000+00:00"
   },
   "node.monerosafe.com:443": {
    "ok": true,
-   "height": 3786920,
+   "height": 3787010,
    "version": "0.18.5.3-release",
    "nettype": "mainnet",
-   "response_ms": 338,
-   "checked_at": "2026-10-18T18:06:26.560445+00:00"
+   "response_ms": 520,
+   "checked_at": "2026-10-18T20:44:12.641163+00:00"
   },
   "node.privacyx.co:443": {
    "ok": false,
    "error": "HTTPError: HTTP Error 400: Bad Request",
-   "checked_at": "2026-10-18T18:06:26.622612+00:00"
+   "checked_at": "2026-10-18T20:44:12.761975+00:00"
   },
   "node.richfowler.net:18089": {
    "ok": true,
-   "height": 3786920,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 61,
-   "checked_at": "2026-10-18T18:06:26.684061+00:00"
+   "response_ms": 254,
+   "checked_at": "2026-10-18T20:44:13.016481+00:00"
   },
   "node.wagyu.xyz:443": {
    "ok": true,
-   "height": 3786920,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 288,
-   "checked_at": "2026-10-18T18:06:26.972747+00:00"
+   "response_ms": 451,
+   "checked_at": "2026-10-18T20:44:13.467699+00:00"
   },
   "node.xmr.indst.eu:443": {
    "ok": true,
-   "height": 3786920,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 670,
-   "checked_at": "2026-10-18T18:06:27.643469+00:00"
+   "response_ms": 553,
+   "checked_at": "2026-10-18T20:44:14.020780+00:00"
   },
   "node.xmr.pub:443": {
    "ok": true,
-   "height": 3786920,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 533,
-   "checked_at": "2026-10-18T18:06:28.177121+00:00"
+   "response_ms": 914,
+   "checked_at": "2026-10-18T20:44:14.935751+00:00"
   },
   "node.xmr.surf:443": {
    "ok": false,
    "error": "HTTPError: HTTP Error 400: Bad Request",
-   "checked_at": "2026-10-18T18:06:28.480764+00:00"
+   "checked_at": "2026-10-18T20:44:15.056123+00:00"
   },
   "node1.getmonero.us:18081": {
    "ok": true,
-   "height": 3786920,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 659,
-   "checked_at": "2026-10-18T18:06:29.140580+00:00"
+   "response_ms": 675,
+   "checked_at": "2026-10-18T20:44:15.731696+00:00"
   },
   "node1.xmr-tw.org:18081": {
    "ok": true,
-   "height": 3786920,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 395,
-   "checked_at": "2026-10-18T18:06:29.536062+00:00"
+   "response_ms": 314,
+   "checked_at": "2026-10-18T20:44:16.045904+00:00"
   },
   "node2.monerodevs.org:18089": {
    "ok": true,
-   "height": 3786920,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 186,
-   "checked_at": "2026-10-18T18:06:29.722828+00:00"
+   "response_ms": 540,
+   "checked_at": "2026-10-18T20:44:16.585966+00:00"
   },
   "node3-us.monero.love:18081": {
    "ok": true,
-   "height": 3786920,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 711,
-   "checked_at": "2026-10-18T18:06:30.433895+00:00"
+   "response_ms": 479,
+   "checked_at": "2026-10-18T20:44:17.065726+00:00"
   },
   "node3.monerodevs.org:18089": {
    "ok": true,
-   "height": 3786920,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 361,
-   "checked_at": "2026-10-18T18:06:30.795914+00:00"
+   "response_ms": 492,
+   "checked_at": "2026-10-18T20:44:17.558182+00:00"
   },
   "owl.lc:18089": {
    "ok": true,
-   "height": 3786920,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 209,
-   "checked_at": "2026-10-18T18:06:31.005066+00:00"
+   "response_ms": 351,
+   "checked_at": "2026-10-18T20:44:17.910006+00:00"
   },
   "pinodexmr.hopto.org:18081": {
    "ok": true,
-   "height": 3786920,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 173,
-   "checked_at": "2026-10-18T18:06:31.178723+00:00"
+   "response_ms": 278,
+   "checked_at": "2026-10-18T20:44:18.188922+00:00"
   },
   "proxmox.izvne.com:18081": {
    "ok": true,
-   "height": 3786920,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 288,
-   "checked_at": "2026-10-18T18:06:31.467610+00:00"
+   "response_ms": 356,
+   "checked_at": "2026-10-18T20:44:18.545117+00:00"
   },
   "rev-140-131.legacytubes.illyse.net:18089": {
    "ok": false,
    "error": "URLError: <urlopen error timed out>",
-   "checked_at": "2026-10-18T18:06:41.880307+00:00"
+   "checked_at": "2026-10-18T20:44:29.049553+00:00"
   },
   "rpc.monerosafe.com:443": {
    "ok": true,
-   "height": 3786920,
+   "height": 3787010,
    "version": "0.18.5.3-release",
    "nettype": "mainnet",
-   "response_ms": 356,
-   "checked_at": "2026-10-18T18:06:42.236474+00:00"
+   "response_ms": 525,
+   "checked_at": "2026-10-18T20:44:29.575467+00:00"
   },
   "static.63.34.245.188.clients.your-server.de:18089": {
    "ok": true,
-   "height": 3786920,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 315,
-   "checked_at": "2026-10-18T18:06:42.551641+00:00"
+   "response_ms": 464,
+   "checked_at": "2026-10-18T20:44:30.040098+00:00"
   },
   "suigintou.middlendian.com:18089": {
    "ok": true,
-   "height": 3786920,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 430,
-   "checked_at": "2026-10-18T18:06:42.981815+00:00"
+   "response_ms": 336,
+   "checked_at": "2026-10-18T20:44:30.376555+00:00"
   },
   "tor-exit-223.for-privacy.net:18081": {
    "ok": true,
-   "height": 3786920,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 254,
-   "checked_at": "2026-10-18T18:06:43.236612+00:00"
+   "response_ms": 325,
+   "checked_at": "2026-10-18T20:44:30.702205+00:00"
   },
   "wakkawakka.duckdns.org:6977": {
    "ok": true,
-   "height": 3786920,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 324,
-   "checked_at": "2026-10-18T18:06:43.561604+00:00"
+   "response_ms": 633,
+   "checked_at": "2026-10-18T20:44:31.335481+00:00"
   },
   "xmr-01.tari.com:443": {
    "ok": false,
    "error": "HTTPError: HTTP Error 400: Bad Request",
-   "checked_at": "2026-10-18T18:06:43.642828+00:00"
+   "checked_at": "2026-10-18T20:44:31.451697+00:00"
   },
   "xmr-au-1.cryptovps.io:443": {
    "ok": true,
-   "height": 3786920,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 880,
-   "checked_at": "2026-10-18T18:06:44.523586+00:00"
+   "response_ms": 929,
+   "checked_at": "2026-10-18T20:44:32.381077+00:00"
   },
   "xmr-berlin.privacyfirst.digital:18089": {
    "ok": true,
-   "height": 3786920,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 410,
-   "checked_at": "2026-10-18T18:06:44.934421+00:00"
+   "response_ms": 862,
+   "checked_at": "2026-10-18T20:44:33.243540+00:00"
   },
   "xmr-bhs.tari.com:443": {
    "ok": true,
-   "height": 3786920,
-   "version": "",
-   "nettype": "mainnet",
-   "response_ms": 326,
-   "checked_at": "2026-10-18T18:06:45.260481+00:00"
-  },
-  "xmr-de-2.boldsuck.org:18081": {
-   "ok": true,
-   "height": 3786920,
-   "version": "",
-   "nettype": "mainnet",
-   "response_ms": 248,
-   "checked_at": "2026-10-18T18:06:45.509253+00:00"
-  },
-  "xmr-de.boldsuck.org:18081": {
-   "ok": true,
-   "height": 3786920,
-   "version": "",
-   "nettype": "mainnet",
-   "response_ms": 375,
-   "checked_at": "2026-10-18T18:06:45.884903+00:00"
-  },
-  "xmr-full.p2pool.uk:18089": {
-   "ok": true,
-   "height": 3786920,
-   "version": "",
-   "nettype": "mainnet",
-   "response_ms": 165,
-   "checked_at": "2026-10-18T18:06:46.050480+00:00"
-  },
-  "xmr-gra.tari.com:443": {
-   "ok": true,
-   "height": 3786920,
-   "version": "",
-   "nettype": "mainnet",
-   "response_ms": 333,
-   "checked_at": "2026-10-18T18:06:46.383816+00:00"
-  },
-  "xmr-in-berlin-2.boldsuck.org:18081": {
-   "ok": true,
-   "height": 3786920,
-   "version": "",
-   "nettype": "mainnet",
-   "response_ms": 182,
-   "checked_at": "2026-10-18T18:06:46.566754+00:00"
-  },
-  "xmr-lim.tari.com:443": {
-   "ok": true,
-   "height": 3786920,
-   "version": "",
-   "nettype": "mainnet",
-   "response_ms": 288,
-   "checked_at": "2026-10-18T18:06:46.855094+00:00"
-  },
-  "xmr-node.ddns.net:18081": {
-   "ok": true,
-   "height": 3786920,
-   "version": "",
-   "nettype": "mainnet",
-   "response_ms": 72,
-   "checked_at": "2026-10-18T18:06:46.928074+00:00"
-  },
-  "xmr-node.rbmpool.com:18089": {
-   "ok": true,
-   "height": 3786920,
-   "version": "",
-   "nettype": "mainnet",
-   "response_ms": 91,
-   "checked_at": "2026-10-18T18:06:47.019384+00:00"
-  },
-  "xmr.0xrpc.io:443": {
-   "ok": true,
-   "height": 3786921,
-   "version": "",
-   "nettype": "mainnet",
-   "response_ms": 518,
-   "checked_at": "2026-10-18T18:06:47.538250+00:00"
-  },
-  "xmr.apschneider-it.eu:443": {
-   "ok": true,
-   "height": 3786921,
-   "version": "",
-   "nettype": "mainnet",
-   "response_ms": 618,
-   "checked_at": "2026-10-18T18:06:48.156869+00:00"
-  },
-  "xmr.carlslab.de:443": {
-   "ok": true,
-   "height": 3786921,
-   "version": "",
-   "nettype": "mainnet",
-   "response_ms": 460,
-   "checked_at": "2026-10-18T18:06:48.616935+00:00"
-  },
-  "xmr.ci.vet:443": {
-   "ok": true,
-   "height": 3786921,
-   "version": "",
-   "nettype": "mainnet",
-   "response_ms": 646,
-   "checked_at": "2026-10-18T18:06:49.263412+00:00"
-  },
-  "xmr.cryptostorm.is:18081": {
-   "ok": true,
-   "height": 3786921,
-   "version": "",
-   "nettype": "mainnet",
-   "response_ms": 619,
-   "checked_at": "2026-10-18T18:06:49.883157+00:00"
-  },
-  "xmr.diyarciftci.xyz:18081": {
-   "ok": true,
-   "height": 3786921,
-   "version": "",
-   "nettype": "mainnet",
-   "response_ms": 198,
-   "checked_at": "2026-10-18T18:06:50.081325+00:00"
-  },
-  "xmr.ducks.party:443": {
-   "ok": true,
-   "height": 3786921,
-   "version": "",
-   "nettype": "mainnet",
-   "response_ms": 283,
-   "checked_at": "2026-10-18T18:06:50.364857+00:00"
-  },
-  "xmr.hexide.com:443": {
-   "ok": true,
-   "height": 3786921,
-   "version": "",
-   "nettype": "mainnet",
-   "response_ms": 406,
-   "checked_at": "2026-10-18T18:06:50.770939+00:00"
-  },
-  "xmr.hostingwire.net:443": {
-   "ok": true,
-   "height": 3786921,
-   "version": "",
-   "nettype": "mainnet",
-   "response_ms": 286,
-   "checked_at": "2026-10-18T18:06:51.057436+00:00"
-  },
-  "xmr.jayjonkman.nl:18089": {
-   "ok": true,
-   "height": 3786921,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
    "response_ms": 522,
-   "checked_at": "2026-10-18T18:06:51.579914+00:00"
+   "checked_at": "2026-10-18T20:44:33.765961+00:00"
+  },
+  "xmr-de-2.boldsuck.org:18081": {
+   "ok": true,
+   "height": 3787010,
+   "version": "",
+   "nettype": "mainnet",
+   "response_ms": 500,
+   "checked_at": "2026-10-18T20:44:34.266211+00:00"
+  },
+  "xmr-de.boldsuck.org:18081": {
+   "ok": true,
+   "height": 3787010,
+   "version": "",
+   "nettype": "mainnet",
+   "response_ms": 431,
+   "checked_at": "2026-10-18T20:44:34.697808+00:00"
+  },
+  "xmr-full.p2pool.uk:18089": {
+   "ok": true,
+   "height": 3787010,
+   "version": "",
+   "nettype": "mainnet",
+   "response_ms": 297,
+   "checked_at": "2026-10-18T20:44:34.995289+00:00"
+  },
+  "xmr-gra.tari.com:443": {
+   "ok": true,
+   "height": 3787010,
+   "version": "",
+   "nettype": "mainnet",
+   "response_ms": 505,
+   "checked_at": "2026-10-18T20:44:35.501106+00:00"
+  },
+  "xmr-in-berlin-2.boldsuck.org:18081": {
+   "ok": true,
+   "height": 3787010,
+   "version": "",
+   "nettype": "mainnet",
+   "response_ms": 278,
+   "checked_at": "2026-10-18T20:44:35.779204+00:00"
+  },
+  "xmr-lim.tari.com:443": {
+   "ok": true,
+   "height": 3787010,
+   "version": "",
+   "nettype": "mainnet",
+   "response_ms": 482,
+   "checked_at": "2026-10-18T20:44:36.261252+00:00"
+  },
+  "xmr-node.ddns.net:18081": {
+   "ok": true,
+   "height": 3787010,
+   "version": "",
+   "nettype": "mainnet",
+   "response_ms": 147,
+   "checked_at": "2026-10-18T20:44:36.409081+00:00"
+  },
+  "xmr-node.rbmpool.com:18089": {
+   "ok": true,
+   "height": 3787010,
+   "version": "",
+   "nettype": "mainnet",
+   "response_ms": 221,
+   "checked_at": "2026-10-18T20:44:36.630391+00:00"
+  },
+  "xmr.0xrpc.io:443": {
+   "ok": true,
+   "height": 3787010,
+   "version": "",
+   "nettype": "mainnet",
+   "response_ms": 1097,
+   "checked_at": "2026-10-18T20:44:37.728217+00:00"
+  },
+  "xmr.apschneider-it.eu:443": {
+   "ok": true,
+   "height": 3787010,
+   "version": "",
+   "nettype": "mainnet",
+   "response_ms": 538,
+   "checked_at": "2026-10-18T20:44:38.266810+00:00"
+  },
+  "xmr.carlslab.de:443": {
+   "ok": true,
+   "height": 3787010,
+   "version": "",
+   "nettype": "mainnet",
+   "response_ms": 730,
+   "checked_at": "2026-10-18T20:44:38.996884+00:00"
+  },
+  "xmr.ci.vet:443": {
+   "ok": true,
+   "height": 3787010,
+   "version": "",
+   "nettype": "mainnet",
+   "response_ms": 1080,
+   "checked_at": "2026-10-18T20:44:40.077854+00:00"
+  },
+  "xmr.cryptostorm.is:18081": {
+   "ok": true,
+   "height": 3787010,
+   "version": "",
+   "nettype": "mainnet",
+   "response_ms": 623,
+   "checked_at": "2026-10-18T20:44:40.701784+00:00"
+  },
+  "xmr.diyarciftci.xyz:18081": {
+   "ok": true,
+   "height": 3787010,
+   "version": "",
+   "nettype": "mainnet",
+   "response_ms": 302,
+   "checked_at": "2026-10-18T20:44:41.003908+00:00"
+  },
+  "xmr.ducks.party:443": {
+   "ok": true,
+   "height": 3787010,
+   "version": "",
+   "nettype": "mainnet",
+   "response_ms": 440,
+   "checked_at": "2026-10-18T20:44:41.444555+00:00"
+  },
+  "xmr.hexide.com:443": {
+   "ok": true,
+   "height": 3787010,
+   "version": "",
+   "nettype": "mainnet",
+   "response_ms": 565,
+   "checked_at": "2026-10-18T20:44:42.009954+00:00"
+  },
+  "xmr.hostingwire.net:443": {
+   "ok": true,
+   "height": 3787010,
+   "version": "",
+   "nettype": "mainnet",
+   "response_ms": 556,
+   "checked_at": "2026-10-18T20:44:42.566055+00:00"
+  },
+  "xmr.jayjonkman.nl:18089": {
+   "ok": true,
+   "height": 3787010,
+   "version": "",
+   "nettype": "mainnet",
+   "response_ms": 799,
+   "checked_at": "2026-10-18T20:44:43.365529+00:00"
   },
   "xmr.kernel-panic.me:18193": {
    "ok": true,
-   "height": 3786921,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 217,
-   "checked_at": "2026-10-18T18:06:51.797287+00:00"
+   "response_ms": 344,
+   "checked_at": "2026-10-18T20:44:43.709896+00:00"
   },
   "xmr.litepay.ch:18081": {
    "ok": true,
-   "height": 3786921,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 273,
-   "checked_at": "2026-10-18T18:06:52.071051+00:00"
+   "response_ms": 421,
+   "checked_at": "2026-10-18T20:44:44.131075+00:00"
   },
   "xmr.marritt.ca:443": {
-   "ok": true,
-   "height": 3786921,
-   "version": "",
-   "nettype": "mainnet",
-   "response_ms": 152,
-   "checked_at": "2026-10-18T18:06:52.223950+00:00"
+   "ok": false,
+   "error": "URLError: <urlopen error timed out>",
+   "checked_at": "2026-10-18T20:45:04.263488+00:00"
   },
   "xmr.monerodice.pro:18089": {
    "ok": true,
-   "height": 3786921,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 303,
-   "checked_at": "2026-10-18T18:06:52.527701+00:00"
+   "response_ms": 448,
+   "checked_at": "2026-10-18T20:45:04.712226+00:00"
   },
   "xmr.mony.st:443": {
    "ok": true,
-   "height": 3786921,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 663,
-   "checked_at": "2026-10-18T18:06:53.191237+00:00"
+   "response_ms": 870,
+   "checked_at": "2026-10-18T20:45:05.583154+00:00"
   },
   "xmr.okade.pro:443": {
    "ok": true,
-   "height": 3786921,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 395,
-   "checked_at": "2026-10-18T18:06:53.586551+00:00"
+   "response_ms": 430,
+   "checked_at": "2026-10-18T20:45:06.013819+00:00"
   },
   "xmr.privacygateway.io:443": {
    "ok": true,
-   "height": 3786921,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 407,
-   "checked_at": "2026-10-18T18:06:53.994338+00:00"
+   "response_ms": 593,
+   "checked_at": "2026-10-18T20:45:06.606989+00:00"
   },
   "xmr.saxemberg.com:18089": {
    "ok": true,
-   "height": 3786921,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 258,
-   "checked_at": "2026-10-18T18:06:54.252435+00:00"
+   "response_ms": 407,
+   "checked_at": "2026-10-18T20:45:07.014548+00:00"
   },
   "xmr.stormycloud.org:18089": {
    "ok": true,
-   "height": 3786921,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 4117,
-   "checked_at": "2026-10-18T18:06:58.369972+00:00"
+   "response_ms": 2076,
+   "checked_at": "2026-10-18T20:45:09.091117+00:00"
   },
   "xmr.support:18089": {
    "ok": false,
    "error": "HTTPError: HTTP Error 400: Bad Request",
-   "checked_at": "2026-10-18T18:06:58.749461+00:00"
+   "checked_at": "2026-10-18T20:45:09.390325+00:00"
   },
   "xmr.surveillance.monster:443": {
    "ok": true,
-   "height": 3786921,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 689,
-   "checked_at": "2026-10-18T18:06:59.438927+00:00"
+   "response_ms": 668,
+   "checked_at": "2026-10-18T20:45:10.058548+00:00"
   },
   "xmr.thinhhv.com:443": {
    "ok": false,
    "error": "HTTPError: HTTP Error 400: Bad Request",
-   "checked_at": "2026-10-18T18:06:59.529940+00:00"
+   "checked_at": "2026-10-18T20:45:10.201280+00:00"
   },
   "xmr.unfilteredrealm.com:443": {
    "ok": true,
-   "height": 3786921,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 419,
-   "checked_at": "2026-10-18T18:06:59.949255+00:00"
+   "response_ms": 356,
+   "checked_at": "2026-10-18T20:45:10.557565+00:00"
   },
   "xmr.unshakled.net:443": {
    "ok": true,
-   "height": 3786921,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 1026,
-   "checked_at": "2026-10-18T18:07:00.975307+00:00"
+   "response_ms": 250,
+   "checked_at": "2026-10-18T20:45:10.808043+00:00"
   },
   "xmr.visnova.pl:443": {
    "ok": true,
-   "height": 3786921,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 871,
-   "checked_at": "2026-10-18T18:07:01.846682+00:00"
+   "response_ms": 936,
+   "checked_at": "2026-10-18T20:45:11.744216+00:00"
   },
   "xmr.vvv.systems:443": {
    "ok": true,
-   "height": 3786921,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 227,
-   "checked_at": "2026-10-18T18:07:02.073921+00:00"
+   "response_ms": 250,
+   "checked_at": "2026-10-18T20:45:11.994791+00:00"
   },
   "xmr1.doggett.tech:18089": {
    "ok": true,
-   "height": 3786921,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 104,
-   "checked_at": "2026-10-18T18:07:02.178093+00:00"
+   "response_ms": 298,
+   "checked_at": "2026-10-18T20:45:12.293695+00:00"
   },
   "xmr2.doggett.tech:18089": {
    "ok": true,
-   "height": 3786921,
-   "version": "",
-   "nettype": "mainnet",
-   "response_ms": 198,
-   "checked_at": "2026-10-18T18:07:02.376236+00:00"
-  },
-  "xmr3.doggett.tech:18089": {
-   "ok": true,
-   "height": 3786921,
-   "version": "",
-   "nettype": "mainnet",
-   "response_ms": 102,
-   "checked_at": "2026-10-18T18:07:02.478577+00:00"
-  },
-  "xmr4.doggett.tech:18089": {
-   "ok": true,
-   "height": 3786921,
-   "version": "",
-   "nettype": "mainnet",
-   "response_ms": 122,
-   "checked_at": "2026-10-18T18:07:02.601407+00:00"
-  },
-  "xmr5.doggett.tech:18089": {
-   "ok": true,
-   "height": 3786921,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
    "response_ms": 300,
-   "checked_at": "2026-10-18T18:07:02.901963+00:00"
+   "checked_at": "2026-10-18T20:45:12.594420+00:00"
+  },
+  "xmr3.doggett.tech:18089": {
+   "ok": true,
+   "height": 3787010,
+   "version": "",
+   "nettype": "mainnet",
+   "response_ms": 284,
+   "checked_at": "2026-10-18T20:45:12.879148+00:00"
+  },
+  "xmr4.doggett.tech:18089": {
+   "ok": true,
+   "height": 3787010,
+   "version": "",
+   "nettype": "mainnet",
+   "response_ms": 292,
+   "checked_at": "2026-10-18T20:45:13.171744+00:00"
+  },
+  "xmr5.doggett.tech:18089": {
+   "ok": true,
+   "height": 3787010,
+   "version": "",
+   "nettype": "mainnet",
+   "response_ms": 462,
+   "checked_at": "2026-10-18T20:45:13.634310+00:00"
   },
   "xmrnode.thecorn.net:443": {
    "ok": true,
-   "height": 3786921,
+   "height": 3787010,
    "version": "",
    "nettype": "mainnet",
-   "response_ms": 158,
-   "checked_at": "2026-10-18T18:07:03.061004+00:00"
+   "response_ms": 333,
+   "checked_at": "2026-10-18T20:45:13.968234+00:00"
   }
  }
 }
