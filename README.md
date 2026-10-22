@@ -123,12 +123,12 @@ Early development. The CLI command mapping in `app.js` follows the documented `m
 
 Keep it stateless. The only vendored dependency is the QR code renderer (qrcode-generator, MIT). The map loads Leaflet from a CDN (the one exception) plus OpenStreetMap tiles. Any feature that would require a server, an account, or handling private key material is out of scope by design.
 
-## Coming soon — Premium
+## Coming soon — Premium Features
 
 A separate Premium section is on the way.<br>
 Ceremony Rooms — a private room keeps your group's multisig ceremony on track across days: it holds only the public coordination strings, validates each paste, and shows whose turn it is.<br>
 Payment Proof — prove an XMR payment happened. Paste a transaction ID, transaction key, and recipient address, and get a receipt.<br>
-Premium will be paid in XMR, with no accounts. The only reason it costs money is to pay for the backend needed to run these features. It stays off until the site moves off GitHub Pages, since rooms and verification need a small backend. The free wizard stays free and stateless.
+Premium will be paid in XMR, with no accounts. The only reason it costs money is to pay for the backend needed to run these features. It stays off until the site moves off GitHub Pages, since rooms and verification need a small backend. The free wizard and node hub stays free and stateless forever as it costs nothing to host.
 
 <p align="center">
   <img src="niblet-wizard.svg" alt="Niblet and the XMR Wizard" height="400">
